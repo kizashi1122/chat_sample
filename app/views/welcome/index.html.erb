@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="http://127.0.0.1:3001/socket.io/socket.io.js"></script>
+<%
+ host = 'http://127.0.0.1:3001'
+ host = 'http://ws.phocs.net' if Rails.env.staging?
+%>
+  <script src="<%= host %>/socket.io/socket.io.js"></script>
   <script>
     function send() {
         socketio.emit("message", document.getElementById('msg').value);
         document.getElementById('msg').value = '';
     }
-    var socketio = io.connect('http://127.0.0.1:3001');
+    var socketio = io.connect('<%= host %>');
 
     socketio.on("connect", function() {});
     socketio.on("disconnect", function(client) {});
