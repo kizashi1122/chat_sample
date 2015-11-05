@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://127.0.0.1:3001/socket.io/socket.io.js"></script>
+  <script>
+    function send() {
+        socketio.emit("message", document.getElementById('msg').value);
+        document.getElementById('msg').value = '';
+    }
+    var socketio = io.connect('http://127.0.0.1:3001');
+
+    socketio.on("connect", function() {});
+    socketio.on("disconnect", function(client) {});
+
+    socketio.on("broadcast", function(data) {
+        console.log(data.value);
+        document.getElementById("messages").innerHTML += "<div>" + data.value + "</div>";
+    });
+    </script>
+</head>
+<body>
+<strong>ws chat</strong><br>
+<input type="text" id="msg"/>
+<input type="button" value="send" onclick="send()"/>
+<br>
+<hr>
+<div id="messages"></div>
+</body>
+</html>
