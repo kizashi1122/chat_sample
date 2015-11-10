@@ -35,3 +35,6 @@ build/
 .rvmrc
 
 /log/*.log
+
+node_modules
+
