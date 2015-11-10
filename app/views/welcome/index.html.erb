@@ -3,7 +3,7 @@
 <head>
 <%
  host = 'http://127.0.0.1:3001'
- host = 'http://ws.phocs.net' if Rails.env.staging?
+ host = '//ws.phocs.net' if Rails.env.staging?
 %>
   <script src="<%= host %>/socket.io/socket.io.js"></script>
   <script>
