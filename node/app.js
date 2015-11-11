@@ -10,6 +10,9 @@ var server = http.createServer(function (req, res) {
 var io = new SocketIO(server);
 server.listen(3001, function() { console.log('Server listening at port %d', 3001) });
 
+var redis = require('socket.io-redis');
+io.adapter(redis({ host: 'localhost', port: 6379}));
+
 //Websocket接続を保存しておく
 var connections = [];
 
