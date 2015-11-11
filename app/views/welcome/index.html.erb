@@ -7,6 +7,9 @@
 %>
   <script src="<%= host %>/socket.io/socket.io.js"></script>
   <script>
+    function enter(event) {
+        if (window.event.keyCode == 13 ){ send() };
+    }
     function send() {
         socketio.emit("message", document.getElementById('msg').value);
         document.getElementById('msg').value = '';
@@ -25,7 +28,7 @@
 <body>
 <strong>ws chat</strong><br>
 <input type="text" id="msg"/>
-<input type="button" value="send" onclick="send()"/>
+<input type="button" value="send" onclick="send()" onkeypress="enter(event)"/>
 <br>
 <hr>
 <div id="messages"></div>
