@@ -1,7 +1,8 @@
 var SocketIO = require('socket.io');
 var http = require('http');
 
-var redis = require('socket.io/lib/stores/redis')  // socket.ioにredisがある
+// var redis = require('socket.io/lib/stores/redis')  // socket.ioにredisがある
+var redis = require('socket.io-redis');
 var redisConf = { host: 'ec2-52-91-171-35.compute-1.amazonaws.com', port: 6379}
 
 var server = http.createServer(function (req, res) {
