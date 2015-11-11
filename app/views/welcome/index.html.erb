@@ -7,8 +7,7 @@
 %>
   <script src="<%= host %>/socket.io/socket.io.js"></script>
   <script>
-    function enter(event) {
-        event ||= window.event;
+    function enter() {
         if (event.keyCode == 13){ send() };
     }
     function send() {
