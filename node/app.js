@@ -1,6 +1,9 @@
 var SocketIO = require('socket.io');
 var http = require('http');
 
+var redis = require('socket.io/lib/stores/redis')  // socket.ioにredisがある
+var redisConf = { host: 'ec2-52-91-171-35.compute-1.amazonaws.com', port: 6379}
+
 var server = http.createServer(function (req, res) {
 //  console.log('request: ' + req);
   console.log(request.headers['user-agent']);
@@ -11,8 +14,14 @@ var server = http.createServer(function (req, res) {
 var io = new SocketIO(server);
 server.listen(3001, function() { console.log('Server listening at port %d', 3001) });
 
-var redis = require('socket.io-redis');
-io.adapter(redis({ host: 'ec2-52-91-171-35.compute-1.amazonaws.com', port: 6379}));
+io.set('store', new redis({
+    redisPub: redisConf,
+    redisSub: redisConf,
+    redisClient: redisConf
+}));
+
+// var redis = require('socket.io-redis');
+// io.adapter(redis(redisConf));
 
 //Websocket接続を保存しておく
 var connections = [];
