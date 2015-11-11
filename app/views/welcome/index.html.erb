@@ -8,7 +8,7 @@
   <script src="<%= host %>/socket.io/socket.io.js"></script>
   <script>
     function enter() {
-        if (event.keyCode == 13){ send() };
+        if (event.keyCode == 13){ send(); };
     }
     function send() {
         socketio.emit("message", document.getElementById('msg').value);
