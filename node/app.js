@@ -9,7 +9,7 @@ var redisConfig = config.get('redis.dbConfig');
 
 var server = http.createServer(function (req, res) {
 //  console.log('request: ' + req);
-  console.log(request.headers['user-agent']);
+  console.log(req.headers['user-agent']);
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('Hello Socket Server');
 });
