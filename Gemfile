@@ -9,7 +9,7 @@ gem 'rails', '~> 4.2.7.1'
 gem 'pg'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 2.7.2'
 # Use SCSS for StyleSheets assets
 gem 'sass-rails', '~> 4.0.3'
 # compressorr for HTML (angularjs) Template
