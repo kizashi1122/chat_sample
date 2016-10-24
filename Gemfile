@@ -64,7 +64,7 @@ gem 'lograge'
 
 # mail
 gem 'mail'
-gem 'mail_address', '~> 1.2.11'
+gem 'mail_address', '~> 1.2.13'
 
 # Exception Notification
 gem 'exception_notification', '~> 4.2.1'
@@ -81,7 +81,7 @@ gem 'twitter-text'
 
 # Socket.io Emitter (WebSocket)
 gem 'redis'
-gem 'socket.io-emitter'
+gem 'socket.io-emitter', '~> 1.0.0'
 gem 'msgpack', '~> 0.5.12'
 
 # Authorize with SNS
