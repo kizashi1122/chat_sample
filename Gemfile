@@ -81,7 +81,7 @@ gem 'twitter-text'
 
 # Socket.io Emitter (WebSocket)
 gem 'redis'
-gem 'socket.io-emitter', '~> 1.0.0'
+gem 'socket.io-emitter'
 gem 'msgpack', '~> 0.5.12'
 
 # Authorize with SNS
