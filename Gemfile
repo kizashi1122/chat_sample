@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 source 'https://rubygems.org'
 
 #ruby '2.1'
@@ -6,7 +5,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.7.1'
 # # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.19.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 2.7.2'
@@ -43,8 +42,8 @@ gem 'angular-rails-templates'
 gem 'settingslogic'
 
 # Uploader
-gem 'carrierwave'               # 0.10.0 が build errorになるため、0.9固定にする
-gem 'fog'                       # for aws S3
+gem 'carrierwave', '~> 0.11.2'               # 0.10.0 が build errorになるため、0.9固定にする
+gem 'fog-aws', '~> 0.13.0'            # for aws S3
 # gem 'ruby-filemagic'            # ファイルの内容をもとにcontent-typeの判定
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
@@ -55,12 +54,12 @@ gem 'devise', '~> 3.4.0'
 gem 'apartment', '~> 0.24.3'
 
 # Aws Sdk
-gem 'aws-sdk', '~> 1.0'
+gem 'aws-sdk', '~> 2.6.32'
 
 # ElasticSearch
-gem 'elasticsearch-rails'
-gem 'elasticsearch-model'
-gem 'lograge'
+gem 'elasticsearch-rails', '~> 0.1.9'
+gem 'elasticsearch-model', '~> 0.1.9'
+gem 'lograge', '~> 0.4.1'
 
 # mail
 gem 'mail'
@@ -72,16 +71,14 @@ gem 'slack-notifier', '~> 1.5.1'
 
 # htmlentities
 gem 'htmlentities' # using in wash html
-# sanitize html
-gem 'sanitize'
 
 # Twitter
-gem 'twitter'
-gem 'twitter-text'
+gem 'twitter', '~> 5.14.0'
+gem 'twitter-text', '~> 1.14.1'
 
 # Socket.io Emitter (WebSocket)
-gem 'redis'
-gem 'socket.io-emitter'
+gem 'redis', '~> 3.2.1'
+gem 'socket.io-emitter', '~> 1.0.0'
 gem 'msgpack', '~> 0.5.12'
 
 # Authorize with SNS
@@ -89,7 +86,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 
 # Intercom
-gem 'intercom-rails', '~> 0.2.26'
+gem 'intercom-rails', '~> 0.3.4'
 
 # encrypt/decrypt smtp password
 gem 'aes'
@@ -98,7 +95,7 @@ gem 'aes'
 gem 'sidekiq', '3.5.4'
 
 # image processing library
-gem 'rmagick'
+gem 'rmagick', '~> 2.16.0'
 
 # for Bulk Insert
 # gem 'activerecord-import'
@@ -167,9 +164,9 @@ group :production, :staging do
   # Engineyard Addons
 
   # New Relic
-  gem 'newrelic_rpm'
-  gem 'newrelic-grape'
+  gem 'newrelic_rpm', '~> 3.17.1'
+  gem 'newrelic-grape', '~> 2.1.0'
   gem 'ey_config'
 
-  gem 'unicorn'
+  gem 'unicorn', '~> 5.2.0'
 end
