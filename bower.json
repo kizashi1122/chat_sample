@@ -2,7 +2,7 @@
   "name": "active-follow",
   "version": "0.0.0",
   "dependencies": {
-    "jquery": "~2.1.0",
+    "jquery": "~3.1.0",
     "angular": "~1.5.0",
     "angular-route": "~1.5.0",
     "angular-resource": "~1.5.0",
@@ -10,21 +10,21 @@
     "angular-i18n": "~1.5.0",
     "angular-touch": "~1.5.0",
     "angular-ui-bootstrap-bower": "^1.2.4",
-    "angular-ui-router": "~0.2.14",
-    "angular-ui-sortable": "^0.14.3",
-    "ng-file-upload": "~12.0.4",
-    "angular-scroll": "~0.6.1",
-    "ngInfiniteScroll": "~1.1.2",
-    "font-awesome": "~4.3.0",
-    "highcharts-release": "~4.0.1",
-    "highcharts-ng": "~0.0.6",
+    "angular-ui-router": "~0.3.2",
+    "angular-ui-sortable": "^0.16.1",
+    "ng-file-upload": "~12.2.13",
+    "angular-scroll": "~1.0.0",
+    "ngInfiniteScroll": "~1.3.4",
+    "font-awesome": "~4.7.0",
+    "highcharts-release": "~5.0.6",
+    "highcharts-ng": "~0.0.13",
     "socket.io-client": "~1.2.0",
-    "twitter-text": "~1.13.0",
-    "perfect-scrollbar": "0.6.10",
-    "stacktrace-js": "~0.6.4",
+    "twitter-text": "~1.14.2",
+    "perfect-scrollbar": "~0.6.15",
+    "stacktrace-js": "~1.3.1",
     "moment": "momentjs#~2.10.6",
-    "normalize-css": "normalize.css#^3.0.3",
-    "material-design-icons-iconfont": "^2.0.4",
+    "normalize-css": "^5.0.0",
+    "material-design-icons-iconfont": "^3.0.3",
     "diff2html": "~1.3.2",
     "jquery-ui": "^1.12.0"
   },
@@ -34,6 +34,7 @@
     "sugar": "~1.4.1"
   },
   "resolutions": {
+    "jquery": "~3.1.0",
     "angular": "~1.5.0"
   }
 }

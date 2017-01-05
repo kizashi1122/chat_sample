@@ -8,32 +8,29 @@ gem 'rails', '~> 4.2.7.1'
 gem 'pg', '~> 0.19.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 2.7.2'
+gem 'uglifier', '>= 3.0.4'
 # Use SCSS for StyleSheets assets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
 # compressorr for HTML (angularjs) Template
 gem 'htmlcompressor'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.6'
 
 # API Support
-gem 'grape', '~> 0.8.0'
+gem 'grape', '~> 0.9.0'
 # JSON Template (with grape)
-gem 'rabl', '~> 0.10.0'
+gem 'rabl', '~> 0.13.0'
 # For use Rabl templates in Grape
-gem 'grape-rabl', '~> 0.2.2'
+gem 'grape-rabl', '~> 0.4.2'
 # Fast JSON Parser (with rabl)
-gem 'oj', '~> 2.11.0'
+gem 'oj', '~> 2.18.0'
 
 # Active Record queries with fewer strings
 gem 'squeel', '~> 1.2.3'
 
 # Organise ActiveRecord model into a tree structure
 gem 'ancestry'
-
-# Turbo-charged counter caches
-gem 'counter_culture', '~> 0.1.34'
 
 # rails-template をasset-pipelineで管理するためのgem
 gem 'angular-rails-templates'
@@ -42,8 +39,8 @@ gem 'angular-rails-templates'
 gem 'settingslogic'
 
 # Uploader
-gem 'carrierwave', '~> 0.11.2'               # 0.10.0 が build errorになるため、0.9固定にする
-gem 'fog-aws', '~> 0.13.0'            # for aws S3
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog-aws', '~> 0.13.0'        # for aws S3
 # gem 'ruby-filemagic'            # ファイルの内容をもとにcontent-typeの判定
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
@@ -54,7 +51,7 @@ gem 'devise', '~> 3.4.0'
 gem 'apartment', '~> 0.24.3'
 
 # Aws Sdk
-gem 'aws-sdk', '~> 2.6.32'
+gem 'aws-sdk', '~> 2.6.39'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 0.1.9'
@@ -74,7 +71,7 @@ gem 'htmlentities' # using in wash html
 
 # Twitter
 gem 'twitter', '~> 5.14.0'
-gem 'twitter-text', '~> 1.14.1'
+gem 'twitter-text', '~> 1.14.2'
 
 # Socket.io Emitter (WebSocket)
 gem 'redis', '~> 3.2.1'
@@ -82,8 +79,8 @@ gem 'socket.io-emitter', '~> 1.0.0'
 gem 'msgpack', '~> 0.5.12'
 
 # Authorize with SNS
-gem 'omniauth'
-gem 'omniauth-twitter'
+gem 'omniauth', '~> 1.3.1'
+gem 'omniauth-twitter', '~> 1.2.1'
 
 # Intercom
 gem 'intercom-rails', '~> 0.3.4'
