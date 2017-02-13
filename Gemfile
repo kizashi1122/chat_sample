@@ -18,7 +18,7 @@ gem 'htmlcompressor'
 gem 'jbuilder', '~> 2.6'
 
 # API Support
-gem 'grape', '~> 0.9.0'
+gem 'grape', '~> 0.8.0'
 # JSON Template (with grape)
 gem 'rabl', '~> 0.13.0'
 # For use Rabl templates in Grape
@@ -93,6 +93,8 @@ gem 'sidekiq', '3.5.4'
 
 # image processing library
 gem 'rmagick', '~> 2.16.0'
+
+gem 'rubyzip'
 
 # for Bulk Insert
 # gem 'activerecord-import'

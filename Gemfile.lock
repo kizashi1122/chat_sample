@@ -91,7 +91,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     buftok (0.2.0)
-    builder (3.2.2)
+    builder (3.2.3)
     byebug (5.0.0)
       columnize (= 0.9.0)
     capybara (2.4.4)
@@ -198,7 +198,7 @@ GEM
     formatador (0.2.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    grape (0.9.0)
+    grape (0.8.0)
       activesupport
       builder
       hashie (>= 2.1.0)
@@ -263,7 +263,7 @@ GEM
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jmespath (1.3.1)
-    json (1.8.3)
+    json (1.8.6)
     json_expressions (0.8.3)
     kgio (2.10.0)
     listen (3.0.3)
@@ -398,6 +398,7 @@ GEM
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
     ruby-graphviz (1.0.9)
+    rubyzip (1.2.0)
     sass (3.4.23)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -502,7 +503,7 @@ DEPENDENCIES
   ey_config
   factory_girl_rails
   fog-aws (~> 0.13.0)
-  grape (~> 0.9.0)
+  grape (~> 0.8.0)
   grape-rabl (~> 0.4.2)
   guard
   guard-coffeescript
@@ -537,6 +538,7 @@ DEPENDENCIES
   redis (~> 3.2.1)
   rmagick (~> 2.16.0)
   rspec-rails
+  rubyzip
   sass-rails
   settingslogic
   sidekiq (= 3.5.4)
