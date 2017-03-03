@@ -78,6 +78,9 @@ gem 'redis', '~> 3.2.1'
 gem 'socket.io-emitter', '~> 1.0.0'
 gem 'msgpack', '~> 0.5.12'
 
+# Firebase (for Chat)
+gem 'firebase', '~> 0.2.6'
+
 # Authorize with SNS
 gem 'omniauth', '~> 1.3.1'
 gem 'omniauth-twitter', '~> 1.2.1'
@@ -94,7 +97,7 @@ gem 'sidekiq', '3.5.4'
 # image processing library
 gem 'rmagick', '~> 2.16.0'
 
-gem 'rubyzip'
+gem 'rubyzip', '~> 1.2.1'
 
 # for Bulk Insert
 # gem 'activerecord-import'
