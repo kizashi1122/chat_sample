@@ -117,28 +117,28 @@ gem 'rubyzip', '~> 1.2.1'
 
 group :development, :test do
   gem 'rspec-rails'              # テストライブラリ
-  gem 'factory_girl_rails'       # activerecord のモデルの生成
+  gem 'factory_girl_rails', '~> 4.8.0'       # activerecord のモデルの生成
   gem 'json_expressions'         # JSON チェック用のヘルパー
-  gem 'database_cleaner'         # テスト後のデータベースのクリーン
-  gem 'spring'                   # テスト高速化
+  gem 'database_cleaner', '~> 1.5.3'         # テスト後のデータベースのクリーン
+  gem 'spring' # , '~> 2.0.1'                   # テスト高速化
   gem 'spring-commands-rspec'    # guard で spring を呼ぶために必要
-  gem 'teaspoon-jasmine'         # javascript テストランナー
+  gem 'teaspoon-jasmine', '~> 2.3.4'         # javascript テストランナー
 
 
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'capybara'                 # rails のインテグレーションテスト
-  gem 'poltergeist'              # capybara の js driver を phantom js にする
+  gem 'capybara', '~> 2.13.0'                 # rails のインテグレーションテスト
+  gem 'poltergeist', '~> 1.14.0'              # capybara の js driver を phantom js にする
 end
 
 group :development do
   # guard 系
-  gem 'guard'                    # ファイル監視
-  gem 'guard-livereload'         # livereload
-  gem 'guard-rspec'              # テストの自動化
+  gem 'guard' # , '~> 2.14.1'                    # ファイル監視
+  gem 'guard-livereload', '~> 2.5.2'          # livereload
+  gem 'guard-rspec', '~> 4.7.3'               # テストの自動化
   gem 'guard-coffeescript'       # テスト用コードのコンパイル用
-  gem 'guard-rails'              # guard 起動時にrails-serverを起動する
+  gem 'guard-rails', '~> 0.8.0'               # guard 起動時にrails-serverを起動する
   gem 'guard-rails-assets'       # assetsを自動コンパイル
   # guard で js test 時にエラーが発生するため、最新ソースを取得する
   # https://github.com/modeset/guard-teaspoon/pull/24
@@ -150,13 +150,13 @@ group :development do
   gem 'binding_of_caller'
 
   # console 表示
-  gem 'pry-rails'                # rails console で pry を使う
-  gem 'pry-byebug'               # debugger
+  gem 'pry-rails', '~> 0.3.6'                # rails console で pry を使う
+  gem 'pry-byebug', '~> 3.4.2'               # debugger
   gem 'hirb'                     # PryでのSQLの結果を綺麗に表示
   gem 'hirb-unicode'
-  gem 'awesome_print'            # Object表示をキレイに表示
+  gem 'awesome_print', '~> 1.7.0'            # Object表示をキレイに表示
 
-  gem 'annotate', '~> 2.6.5'     # Model に  Schema Info を自動挿入する gem
+  gem 'annotate', '~> 2.7.1'     # Model に  Schema Info を自動挿入する gem
 
   # er図生成
   gem 'rails-erd', git: 'https://github.com/paulwittmann/rails-erd', branch: 'mavericks'
