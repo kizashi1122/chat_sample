@@ -60,7 +60,7 @@ gem 'lograge', '~> 0.4.1'
 
 # mail
 gem 'mail'
-gem 'mail_address', '~> 1.2.13'
+gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
 gem 'exception_notification', '~> 4.2.1'

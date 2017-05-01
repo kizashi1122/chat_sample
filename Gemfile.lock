@@ -282,7 +282,7 @@ GEM
     lumberjack (1.0.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    mail_address (1.2.13)
+    mail_address (1.2.14)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
@@ -525,7 +525,7 @@ DEPENDENCIES
   json_expressions
   lograge (~> 0.4.1)
   mail
-  mail_address (~> 1.2.13)
+  mail_address (~> 1.2.14)
   msgpack (~> 0.5.12)
   newrelic-grape (~> 2.1.0)
   newrelic_rpm (~> 3.17.1)
@@ -558,4 +558,4 @@ DEPENDENCIES
   unicorn (~> 5.2.0)
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
