@@ -280,7 +280,7 @@ GEM
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.9)
-    mail (2.6.4)
+    mail (2.6.5)
       mime-types (>= 1.16, < 4)
     mail_address (1.2.14)
     memoizable (0.4.2)
@@ -524,7 +524,7 @@ DEPENDENCIES
   jbuilder (~> 2.6)
   json_expressions
   lograge (~> 0.4.1)
-  mail
+  mail (~> 2.6.5)
   mail_address (~> 1.2.14)
   msgpack (~> 0.5.12)
   newrelic-grape (~> 2.1.0)

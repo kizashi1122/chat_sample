@@ -59,7 +59,7 @@ gem 'elasticsearch-model', '~> 0.1.9'
 gem 'lograge', '~> 0.4.1'
 
 # mail
-gem 'mail'
+gem 'mail', '~> 2.6.5'
 gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
