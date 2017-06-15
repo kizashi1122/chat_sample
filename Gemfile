@@ -5,17 +5,17 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.7.1'
 # # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.19.0'
+gem 'pg', '~> 0.20.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 3.0.4'
+gem 'uglifier', '>= 3.2.0'
 # Use SCSS for StyleSheets assets
 gem 'sass-rails'
 # compressorr for HTML (angularjs) Template
 gem 'htmlcompressor'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.6'
+gem 'jbuilder', '~> 2.7.0'
 
 # API Support
 gem 'grape', '~> 0.8.0'
@@ -40,7 +40,7 @@ gem 'settingslogic'
 
 # Uploader
 gem 'carrierwave', '~> 0.11.2'
-gem 'fog-aws', '~> 0.13.0'        # for aws S3
+gem 'fog-aws', '~> 1.3.0'         # for aws S3
 # gem 'ruby-filemagic'            # ファイルの内容をもとにcontent-typeの判定
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
@@ -51,12 +51,12 @@ gem 'devise', '~> 3.4.0'
 gem 'apartment', '~> 0.24.3'
 
 # Aws Sdk
-gem 'aws-sdk', '~> 2.6.39'
+gem 'aws-sdk', '~> 2.9.36'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 0.1.9'
 gem 'elasticsearch-model', '~> 0.1.9'
-gem 'lograge', '~> 0.4.1'
+gem 'lograge', '~> 0.5.1'
 
 # mail
 gem 'mail', '~> 2.6.5'
@@ -70,11 +70,11 @@ gem 'slack-notifier', '~> 1.5.1'
 gem 'htmlentities' # using in wash html
 
 # Twitter
-gem 'twitter', '~> 5.14.0'
-gem 'twitter-text', '~> 1.14.2'
+gem 'twitter', '~> 6.1.0'
+gem 'twitter-text', '~> 1.14.5'
 
 # Socket.io Emitter (WebSocket)
-gem 'redis', '~> 3.2.1'
+gem 'redis', '~> 3.3.3'
 gem 'socket.io-emitter', '~> 1.0.0'
 gem 'msgpack', '~> 0.5.12'
 
@@ -82,11 +82,11 @@ gem 'msgpack', '~> 0.5.12'
 gem 'firebase', '~> 0.2.6'
 
 # Authorize with SNS
-gem 'omniauth', '~> 1.3.1'
-gem 'omniauth-twitter', '~> 1.2.1'
+gem 'omniauth', '~> 1.6.1'
+gem 'omniauth-twitter', '~> 1.4.0'
 
 # Intercom
-gem 'intercom-rails', '~> 0.3.4'
+gem 'intercom-rails', '~> 0.3.5'
 
 # encrypt/decrypt smtp password
 gem 'aes'
@@ -119,7 +119,7 @@ group :development, :test do
   gem 'rspec-rails'              # テストライブラリ
   gem 'factory_girl_rails', '~> 4.8.0'       # activerecord のモデルの生成
   gem 'json_expressions'         # JSON チェック用のヘルパー
-  gem 'database_cleaner', '~> 1.5.3'         # テスト後のデータベースのクリーン
+  gem 'database_cleaner', '~> 1.6.1'         # テスト後のデータベースのクリーン
   gem 'spring' # , '~> 2.0.1'                   # テスト高速化
   gem 'spring-commands-rspec'    # guard で spring を呼ぶために必要
   gem 'teaspoon-jasmine', '~> 2.3.4'         # javascript テストランナー
@@ -128,8 +128,8 @@ group :development, :test do
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'capybara', '~> 2.13.0'                 # rails のインテグレーションテスト
-  gem 'poltergeist', '~> 1.14.0'              # capybara の js driver を phantom js にする
+  gem 'capybara', '~> 2.14.1'                 # rails のインテグレーションテスト
+  gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
 end
 
 group :development do
@@ -156,7 +156,7 @@ group :development do
   gem 'hirb-unicode'
   gem 'awesome_print', '~> 1.7.0'            # Object表示をキレイに表示
 
-  gem 'annotate', '~> 2.7.1'     # Model に  Schema Info を自動挿入する gem
+  gem 'annotate', '~> 2.7.2'     # Model に  Schema Info を自動挿入する gem
 
   # er図生成
   gem 'rails-erd', git: 'https://github.com/paulwittmann/rails-erd', branch: 'mavericks'
@@ -166,9 +166,15 @@ group :production, :staging do
   # Engineyard Addons
 
   # New Relic
-  gem 'newrelic_rpm', '~> 3.17.1'
+  gem 'newrelic_rpm', '~> 4.2.0'
   gem 'newrelic-grape', '~> 2.1.0'
   gem 'ey_config'
 
-  gem 'unicorn', '~> 5.2.0'
+  gem 'unicorn', '~> 5.3.0'
 end
+
+
+# Wercker にて、setup DB で、
+# NoMethodError: undefined method `last_comment' for #<Rake::Application:0x00000003044e00> でおちた。
+# https://www.oiax.jp/books/rails_kochiku_guide/first_rspec_example_failure.html
+gem 'rake', '< 11.0'
