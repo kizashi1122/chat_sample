@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.7.1'
 # # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.20.0'
+gem 'pg', '~> 0.21.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 3.2.0'
@@ -51,7 +51,7 @@ gem 'devise', '~> 3.4.0'
 gem 'apartment', '~> 0.24.3'
 
 # Aws Sdk
-gem 'aws-sdk', '~> 2.9.36'
+gem 'aws-sdk', '~> 2.9.40'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 0.1.9'
@@ -59,7 +59,7 @@ gem 'elasticsearch-model', '~> 0.1.9'
 gem 'lograge', '~> 0.5.1'
 
 # mail
-gem 'mail', '~> 2.6.5'
+gem 'mail', '~> 2.6.6'
 gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
