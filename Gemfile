@@ -40,7 +40,7 @@ gem 'settingslogic'
 
 # Uploader
 gem 'carrierwave', '~> 0.11.2'
-gem 'fog-aws', '~> 1.3.0'         # for aws S3
+gem 'fog-aws', '~> 1.4.0'         # for aws S3
 # gem 'ruby-filemagic'            # ファイルの内容をもとにcontent-typeの判定
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
@@ -51,7 +51,7 @@ gem 'devise', '~> 3.4.0'
 gem 'apartment', '~> 0.24.3'
 
 # Aws Sdk
-gem 'aws-sdk', '~> 2.9.40'
+gem 'aws-sdk', '~> 2.10.8'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 0.1.9'
@@ -71,7 +71,7 @@ gem 'htmlentities' # using in wash html
 
 # Twitter
 gem 'twitter', '~> 6.1.0'
-gem 'twitter-text', '~> 1.14.5'
+gem 'twitter-text', '~> 1.14.7'
 
 # Socket.io Emitter (WebSocket)
 gem 'redis', '~> 3.3.3'
@@ -92,7 +92,9 @@ gem 'intercom-rails', '~> 0.3.5'
 gem 'aes'
 
 # background job
-gem 'sidekiq', '3.5.4'
+# https://github.com/mperham/sidekiq/blob/master/4.0-Upgrade.md
+gem 'redis-namespace'
+gem 'sidekiq', '~> 4.2.10'
 
 # image processing library
 gem 'rmagick', '~> 2.16.0'
@@ -128,7 +130,7 @@ group :development, :test do
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'capybara', '~> 2.14.1'                 # rails のインテグレーションテスト
+  gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
   gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
 end
 
@@ -154,7 +156,7 @@ group :development do
   gem 'pry-byebug', '~> 3.4.2'               # debugger
   gem 'hirb'                     # PryでのSQLの結果を綺麗に表示
   gem 'hirb-unicode'
-  gem 'awesome_print', '~> 1.7.0'            # Object表示をキレイに表示
+  gem 'awesome_print', '~> 1.8.0'            # Object表示をキレイに表示
 
   gem 'annotate', '~> 2.7.2'     # Model に  Schema Info を自動挿入する gem
 
