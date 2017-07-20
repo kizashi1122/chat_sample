@@ -18,7 +18,7 @@ gem 'htmlcompressor'
 gem 'jbuilder', '~> 2.7.0'
 
 # API Support
-gem 'grape', '~> 0.8.0'
+gem 'grape', '0.19.2'
 # JSON Template (with grape)
 gem 'rabl', '~> 0.13.0'
 # For use Rabl templates in Grape
@@ -45,7 +45,7 @@ gem 'fog-aws', '~> 1.4.0'         # for aws S3
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 3.4.0'
+gem 'devise', '~> 4.3.0'
 
 # managed Tenant
 gem 'apartment', '~> 0.24.3'
@@ -64,7 +64,7 @@ gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
 gem 'exception_notification', '~> 4.2.1'
-gem 'slack-notifier', '~> 1.5.1'
+gem 'slack-notifier', '~> 2.2.2'
 
 # htmlentities
 gem 'htmlentities' # using in wash html
@@ -169,7 +169,6 @@ group :production, :staging do
 
   # New Relic
   gem 'newrelic_rpm', '~> 4.2.0'
-  gem 'newrelic-grape', '~> 2.1.0'
   gem 'ey_config'
 
   gem 'unicorn', '~> 5.3.0'
