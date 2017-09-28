@@ -95,6 +95,8 @@ gem 'aes'
 # https://github.com/mperham/sidekiq/blob/master/4.0-Upgrade.md
 gem 'redis-namespace'
 gem 'sidekiq', '~> 4.2.10'
+gem 'sidekiq-failures'
+
 
 # image processing library
 gem 'rmagick', '~> 2.16.0'
@@ -116,6 +118,9 @@ gem 'rubyzip', '~> 1.2.1'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Nokogiri の脆弱性対応
+gem 'rails-html-sanitizer', '~> 1.0.3'
+gem 'rails-dom-testing', '~> 1.0.8'
 
 group :development, :test do
   gem 'rspec-rails'              # テストライブラリ
@@ -124,6 +129,7 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.6.1'         # テスト後のデータベースのクリーン
   gem 'spring' # , '~> 2.0.1'                   # テスト高速化
   gem 'spring-commands-rspec'    # guard で spring を呼ぶために必要
+  gem 'teaspoon', '~> 1.0.2'                 # javascript テストランナー
   gem 'teaspoon-jasmine', '~> 2.3.4'         # javascript テストランナー
 
 
@@ -159,9 +165,6 @@ group :development do
   gem 'awesome_print', '~> 1.8.0'            # Object表示をキレイに表示
 
   gem 'annotate', '~> 2.7.2'     # Model に  Schema Info を自動挿入する gem
-
-  # er図生成
-  gem 'rails-erd', git: 'https://github.com/paulwittmann/rails-erd', branch: 'mavericks'
 end
 
 group :production, :staging do
