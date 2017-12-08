@@ -28,6 +28,8 @@ gem 'oj', '~> 2.18.0'
 
 # Active Record queries with fewer strings
 gem 'squeel', '~> 1.2.3'
+# bulk insertion of data into your database using ActiveRecord
+gem 'activerecord-import', '~> 0.20.2'
 
 # Organise ActiveRecord model into a tree structure
 gem 'ancestry'
@@ -59,7 +61,7 @@ gem 'elasticsearch-model', '~> 0.1.9'
 gem 'lograge', '~> 0.5.1'
 
 # mail
-gem 'mail', '~> 2.6.6'
+gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net::readtimeout period.
 gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
@@ -126,7 +128,7 @@ group :development, :test do
   gem 'rspec-rails'              # テストライブラリ
   gem 'factory_girl_rails', '~> 4.8.0'       # activerecord のモデルの生成
   gem 'json_expressions'         # JSON チェック用のヘルパー
-  gem 'database_cleaner', '~> 1.6.1'         # テスト後のデータベースのクリーン
+  gem 'database_cleaner', '~> 1.6.2'         # テスト後のデータベースのクリーン
   gem 'spring' # , '~> 2.0.1'                   # テスト高速化
   gem 'spring-commands-rspec'    # guard で spring を呼ぶために必要
   gem 'teaspoon', '~> 1.0.2'                 # javascript テストランナー
@@ -158,11 +160,13 @@ group :development do
   gem 'binding_of_caller'
 
   # console 表示
-  gem 'pry-rails', '~> 0.3.6'                # rails console で pry を使う
-  gem 'pry-byebug', '~> 3.4.2'               # debugger
-  gem 'hirb'                     # PryでのSQLの結果を綺麗に表示
-  gem 'hirb-unicode'
-  gem 'awesome_print', '~> 1.8.0'            # Object表示をキレイに表示
+  gem 'pry-rails'        # rails console で pry を使う
+  gem 'pry-byebug'       # debugger
+
+  # rails console 内で Apartment::Database.switch が動作しなくなったため、コメントアウト
+  # gem 'hirb'           # PryでのSQLの結果を綺麗に表示
+  # gem 'hirb-unicode'
+  # gem 'awesome_print'  # Object表示をキレイに表示
 
   gem 'annotate', '~> 2.7.2'     # Model に  Schema Info を自動挿入する gem
 end
