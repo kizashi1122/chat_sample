@@ -6,13 +6,16 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.2.7.1'
 # # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.21.0'
+# convert array for postgresql
+# (Rails 5.0 から PG::TextEncoder::Array を使用するため不要となる)
+gem 'pg_array_parser'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 3.2.0'
+gem 'uglifier', '>= 4.1.3'
 # Use SCSS for StyleSheets assets
-gem 'sass-rails'
+gem 'sass-rails', '~> 5.0.7'
 # compressorr for HTML (angularjs) Template
-gem 'htmlcompressor'
+gem 'htmlcompressor', '~> 0.4.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7.0'
@@ -47,7 +50,7 @@ gem 'fog-aws', '~> 1.4.0'         # for aws S3
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 4.3.0'
+gem 'devise', '~> 4.4.0'
 
 # managed Tenant
 gem 'apartment', '~> 0.24.3'
@@ -56,9 +59,9 @@ gem 'apartment', '~> 0.24.3'
 gem 'aws-sdk', '~> 2.10.8'
 
 # ElasticSearch
-gem 'elasticsearch-rails', '~> 0.1.9'
-gem 'elasticsearch-model', '~> 0.1.9'
-gem 'lograge', '~> 0.5.1'
+gem 'elasticsearch-rails', '~> 2.0.1'
+gem 'elasticsearch-model', '~> 2.0.1'
+gem 'lograge', '~> 0.9.0'
 
 # mail
 gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net::readtimeout period.
@@ -72,7 +75,7 @@ gem 'slack-notifier', '~> 2.2.2'
 gem 'htmlentities' # using in wash html
 
 # Twitter
-gem 'twitter', '~> 6.1.0'
+gem 'twitter', '~> 6.2.0'
 gem 'twitter-text', '~> 1.14.7'
 
 # Socket.io Emitter (WebSocket)
@@ -89,13 +92,15 @@ gem 'omniauth-twitter', '~> 1.4.0'
 
 # Intercom
 gem 'intercom-rails', '~> 0.3.5'
+# Mixpanel
+gem 'mixpanel-ruby'
 
 # encrypt/decrypt smtp password
 gem 'aes'
 
 # background job
 # https://github.com/mperham/sidekiq/blob/master/4.0-Upgrade.md
-gem 'redis-namespace'
+gem 'redis-namespace', '~> 1.6.0'
 gem 'sidekiq', '~> 4.2.10'
 gem 'sidekiq-failures'
 
@@ -175,10 +180,10 @@ group :production, :staging do
   # Engineyard Addons
 
   # New Relic
-  gem 'newrelic_rpm', '~> 4.2.0'
+  gem 'newrelic_rpm', '~> 4.7.1'
   gem 'ey_config'
 
-  gem 'unicorn', '~> 5.3.0'
+  gem 'unicorn', '~> 5.4.0'
 end
 
 
