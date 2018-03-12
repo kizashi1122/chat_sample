@@ -59,8 +59,8 @@ gem 'apartment', '~> 0.24.3'
 gem 'aws-sdk', '~> 2.10.8'
 
 # ElasticSearch
-gem 'elasticsearch-rails', '~> 2.0.1'
-gem 'elasticsearch-model', '~> 2.0.1'
+gem 'elasticsearch-rails', '~> 5.0.2'
+gem 'elasticsearch-model', '~> 5.0.2'
 gem 'lograge', '~> 0.9.0'
 
 # mail
@@ -77,6 +77,9 @@ gem 'htmlentities' # using in wash html
 # Twitter
 gem 'twitter', '~> 6.2.0'
 gem 'twitter-text', '~> 1.14.7'
+
+# LINE
+gem 'line-bot-api'
 
 # Socket.io Emitter (WebSocket)
 gem 'redis', '~> 3.3.3'
@@ -139,6 +142,8 @@ group :development, :test do
   gem 'teaspoon', '~> 1.0.2'                 # javascript テストランナー
   gem 'teaspoon-jasmine', '~> 2.3.4'         # javascript テストランナー
 
+  gem 'webmock'
+  gem 'fakeweb'
 
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
