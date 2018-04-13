@@ -11,7 +11,7 @@ gem 'pg', '~> 0.21.0'
 gem 'pg_array_parser'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 4.1.3'
+gem 'uglifier', '>= 4.1.8'
 # Use SCSS for StyleSheets assets
 gem 'sass-rails', '~> 5.0.7'
 # compressorr for HTML (angularjs) Template
@@ -32,7 +32,7 @@ gem 'oj', '~> 2.18.0'
 # Active Record queries with fewer strings
 gem 'squeel', '~> 1.2.3'
 # bulk insertion of data into your database using ActiveRecord
-gem 'activerecord-import', '~> 0.20.2'
+gem 'activerecord-import', '~> 0.22.0'
 
 # Organise ActiveRecord model into a tree structure
 gem 'ancestry'
@@ -57,7 +57,7 @@ gem 'fog-aws', '~> 1.4.0'         # for aws S3
 gem 'devise', '~> 4.4.0'
 
 # managed Tenant
-gem 'apartment', '~> 0.24.3'
+gem 'apartment', '~> 2.1.0'
 
 # Aws Sdk
 gem 'aws-sdk', '~> 2.10.8'
@@ -65,7 +65,7 @@ gem 'aws-sdk', '~> 2.10.8'
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 5.0.2'
 gem 'elasticsearch-model', '~> 5.0.2'
-gem 'lograge', '~> 0.9.0'
+gem 'lograge', '~> 0.10.0'
 
 # mail
 gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net::readtimeout period.
@@ -73,7 +73,7 @@ gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
 gem 'exception_notification', '~> 4.2.1'
-gem 'slack-notifier', '~> 2.2.2'
+gem 'slack-notifier', '~> 2.3.2'
 
 # htmlentities
 gem 'htmlentities' # using in wash html
@@ -98,7 +98,7 @@ gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-twitter', '~> 1.4.0'
 
 # Intercom
-gem 'intercom-rails', '~> 0.3.5'
+gem 'intercom-rails', '~> 0.3.8'
 # Mixpanel
 gem 'mixpanel-ruby'
 
@@ -189,7 +189,7 @@ group :production, :staging do
   # Engineyard Addons
 
   # New Relic
-  gem 'newrelic_rpm', '~> 4.7.1'
+  gem 'newrelic_rpm', '~> 5.0.0.342'
   gem 'ey_config'
 
   gem 'unicorn', '~> 5.4.0'
