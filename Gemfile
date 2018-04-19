@@ -40,10 +40,6 @@ gem 'ancestry'
 # rails-template をasset-pipelineで管理するためのgem
 gem 'angular-rails-templates'
 
-# ckeditor
-# bower からインストールすると skin が lazyload するなど問題が多いため gem からインストールする
-gem 'ckeditor'
-
 # 定数の一元管理
 gem 'settingslogic'
 
