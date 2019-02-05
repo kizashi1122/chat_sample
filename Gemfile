@@ -2,8 +2,12 @@ source 'https://rubygems.org'
 
 #ruby '2.1'
 
+# use latest version for engine-yard
+gem 'bundler', '>= 1.16.0'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.7.1'
+gem 'rails', '~> 4.2.11'
 # # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.21.0'
 # convert array for postgresql
@@ -21,7 +25,7 @@ gem 'htmlcompressor', '~> 0.4.0'
 gem 'jbuilder', '~> 2.7.0'
 
 # API Support
-gem 'grape', '0.19.2'
+gem 'grape', '1.1.0'
 # JSON Template (with grape)
 gem 'rabl', '~> 0.13.0'
 # For use Rabl templates in Grape
@@ -42,6 +46,12 @@ gem 'angular-rails-templates'
 
 # 定数の一元管理
 gem 'settingslogic'
+
+# session を redis に保存
+gem 'redis-rails'
+
+#
+gem 'parallel'
 
 # Uploader
 gem 'carrierwave', '~> 0.11.2'
@@ -74,12 +84,19 @@ gem 'slack-notifier', '~> 2.3.2'
 # htmlentities
 gem 'htmlentities' # using in wash html
 
+# HTTP Client Wrapper
+gem 'faraday'
+
 # Twitter
-gem 'twitter', '~> 6.2.0'
-gem 'twitter-text', '~> 1.14.7'
+# 修正の動きがないため、ソースが動かないように fork した上で master branch を取得するようにする
+gem 'twitter', git: 'https://github.com/ishiyu/twitter.git', ref: '844818c'
+gem 'twitter-text', '~> 3.0.0'
 
 # LINE
 gem 'line-bot-api'
+
+# Slack
+gem 'slack-ruby-client'
 
 # Socket.io Emitter (WebSocket)
 gem 'redis', '~> 3.3.3'
@@ -92,6 +109,7 @@ gem 'firebase', '~> 0.2.6'
 # Authorize with SNS
 gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-twitter', '~> 1.4.0'
+gem 'omniauth-slack', :git => 'https://github.com/ginjo/omniauth-slack.git' # 本家に更新がないため ginjo repo を使用
 
 # Intercom
 gem 'intercom-rails', '~> 0.3.8'
@@ -150,6 +168,7 @@ group :development, :test do
 
   gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
   gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -185,7 +204,7 @@ group :production, :staging do
   # Engineyard Addons
 
   # New Relic
-  gem 'newrelic_rpm', '~> 5.0.0.342'
+  gem 'newrelic_rpm', '~> 6.0.0.351'
   gem 'ey_config'
 
   gem 'unicorn', '~> 5.4.0'
