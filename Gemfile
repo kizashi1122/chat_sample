@@ -66,7 +66,7 @@ gem 'devise', '~> 4.4.0'
 gem 'apartment', '~> 2.1.0'
 
 # Aws Sdk
-gem 'aws-sdk', '~> 2.10.8'
+gem 'aws-sdk', '~> 2.11.219'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 5.0.2'
@@ -112,7 +112,7 @@ gem 'omniauth-twitter', '~> 1.4.0'
 gem 'omniauth-slack', :git => 'https://github.com/ginjo/omniauth-slack.git' # 本家に更新がないため ginjo repo を使用
 
 # Intercom
-gem 'intercom-rails', '~> 0.3.8'
+gem 'intercom-rails', '~> 0.4.0'
 # Mixpanel
 gem 'mixpanel-ruby'
 
@@ -129,7 +129,7 @@ gem 'sidekiq-failures'
 # image processing library
 gem 'rmagick', '~> 2.16.0'
 
-gem 'rubyzip', '~> 1.2.1'
+gem 'rubyzip', '~> 1.2.2'
 
 # for Bulk Insert
 # gem 'activerecord-import'
@@ -148,7 +148,7 @@ gem 'rubyzip', '~> 1.2.1'
 
 # Nokogiri の脆弱性対応
 gem 'rails-html-sanitizer', '~> 1.0.3'
-gem 'rails-dom-testing', '~> 1.0.8'
+gem 'rails-dom-testing', '~> 1.0.9'
 
 group :development, :test do
   gem 'rspec-rails'              # テストライブラリ
