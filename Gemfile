@@ -78,7 +78,7 @@ gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net
 gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
-gem 'exception_notification', '~> 4.2.1'
+gem 'exception_notification', '~> 4.3.0'
 gem 'slack-notifier', '~> 2.3.2'
 
 # htmlentities
@@ -152,9 +152,9 @@ gem 'rails-dom-testing', '~> 1.0.9'
 
 group :development, :test do
   gem 'rspec-rails'              # テストライブラリ
-  gem 'factory_girl_rails', '~> 4.8.0'       # activerecord のモデルの生成
+  gem 'factory_girl_rails', '~> 4.9.0'       # activerecord のモデルの生成
   gem 'json_expressions'         # JSON チェック用のヘルパー
-  gem 'database_cleaner', '~> 1.6.2'         # テスト後のデータベースのクリーン
+  gem 'database_cleaner', '~> 1.7.0'         # テスト後のデータベースのクリーン
   gem 'spring' # , '~> 2.0.1'                   # テスト高速化
   gem 'spring-commands-rspec'    # guard で spring を呼ぶために必要
   gem 'teaspoon', '~> 1.0.2'                 # javascript テストランナー
