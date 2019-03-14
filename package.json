@@ -37,7 +37,6 @@
     "ngclipboard": "^1.1.1",
     "normalize.css": "^5.0.0",
     "perfect-scrollbar": "~0.6.15",
-    "socket.io-client": "~1.2.0",
     "stacktrace-js": "~1.3.1",
     "twitter-text": "~2.0.5",
     "url-polyfill": "^1.1.3",

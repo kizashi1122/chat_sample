@@ -36,7 +36,7 @@ gem 'oj', '~> 2.18.0'
 # Active Record queries with fewer strings
 gem 'squeel', '~> 1.2.3'
 # bulk insertion of data into your database using ActiveRecord
-gem 'activerecord-import', '~> 0.22.0'
+gem 'activerecord-import', '~> 1.0.1'
 
 # Organise ActiveRecord model into a tree structure
 gem 'ancestry'
@@ -152,7 +152,7 @@ gem 'rails-dom-testing', '~> 1.0.9'
 
 group :development, :test do
   gem 'rspec-rails'              # テストライブラリ
-  gem 'factory_girl_rails', '~> 4.9.0'       # activerecord のモデルの生成
+  gem 'factory_bot_rails'        # activerecord のモデルの生成
   gem 'json_expressions'         # JSON チェック用のヘルパー
   gem 'database_cleaner', '~> 1.7.0'         # テスト後のデータベースのクリーン
   gem 'spring' # , '~> 2.0.1'                   # テスト高速化
