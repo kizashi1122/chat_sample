@@ -63,7 +63,7 @@ gem 'fog-aws', '~> 1.4.0'         # for aws S3
 gem 'devise', '~> 4.4.0'
 
 # managed Tenant
-gem 'apartment', '~> 2.1.0'
+gem 'apartment', '~> 2.2.0'
 
 # Aws Sdk
 gem 'aws-sdk', '~> 2.11.219'
@@ -204,7 +204,7 @@ group :production, :staging do
   # Engineyard Addons
 
   # New Relic
-  gem 'newrelic_rpm', '~> 6.0.0.351'
+  gem 'newrelic_rpm', '~> 6.1.0.351'
   gem 'ey_config'
 
   gem 'unicorn', '~> 5.4.0'
