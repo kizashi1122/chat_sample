@@ -60,7 +60,7 @@ gem 'fog-aws', '~> 1.4.0'         # for aws S3
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 4.4.0'
+gem 'devise', '~> 4.6.0'
 
 # managed Tenant
 gem 'apartment', '~> 2.2.0'
