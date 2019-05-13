@@ -25,7 +25,7 @@ gem 'htmlcompressor', '~> 0.4.0'
 gem 'jbuilder', '~> 2.7.0'
 
 # API Support
-gem 'grape', '1.1.0'
+gem 'grape', '~> 1.2.3'
 # JSON Template (with grape)
 gem 'rabl', '~> 0.13.0'
 # For use Rabl templates in Grape
@@ -83,9 +83,6 @@ gem 'slack-notifier', '~> 2.3.2'
 
 # htmlentities
 gem 'htmlentities' # using in wash html
-
-# HTTP Client Wrapper
-gem 'faraday'
 
 # Twitter
 # 修正の動きがないため、ソースが動かないように fork した上で master branch を取得するようにする
@@ -150,6 +147,10 @@ gem 'rubyzip', '~> 1.2.2'
 gem 'rails-html-sanitizer', '~> 1.0.3'
 gem 'rails-dom-testing', '~> 1.0.9'
 
+# PRIVATE GEM
+gem 'fast4jp', git: 'git@github.com:ingage/fast4jp.git'
+
+
 group :development, :test do
   gem 'rspec-rails'              # テストライブラリ
   gem 'factory_bot_rails'        # activerecord のモデルの生成
@@ -204,7 +205,7 @@ group :production, :staging do
   # Engineyard Addons
 
   # New Relic
-  gem 'newrelic_rpm', '~> 6.1.0.351'
+  gem 'newrelic_rpm', '~> 6.3.0.355'
   gem 'ey_config'
 
   gem 'unicorn', '~> 5.4.0'

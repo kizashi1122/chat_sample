@@ -26,7 +26,7 @@
     "firebase": "^3.9.0",
     "highcharts": "^7.0.0",
     "highcharts-ng": "~0.0.13",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "jquery-ui": "^1.12.0",
     "material-design-icons-iconfont": "^4.0.5",
     "moment": "^2.24.0",
@@ -47,7 +47,7 @@
     "sugar": "~1.4.1"
   },
   "resolutions": {
-    "jquery": "3.3.1",
+    "jquery": "^3.4.0",
     "angular": "1.5.11"
   }
 }

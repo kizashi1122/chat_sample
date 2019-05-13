@@ -1,4 +1,12 @@
 GIT
+  remote: git@github.com:ingage/fast4jp.git
+  revision: eb7ca25ffa62321cdd201ae382f3c92fc7649ca7
+  specs:
+    fast4jp (1.0.0)
+      faraday
+      oj
+
+GIT
   remote: https://github.com/ginjo/omniauth-slack.git
   revision: 0bb174ef3c83d3dec6428388545479f2d7b15275
   specs:
@@ -87,14 +95,14 @@ GEM
       public_suffix (>= 2)
       rack (>= 1.3.6)
     arel (6.0.4)
-    aws-eventstream (1.0.2)
-    aws-sdk (2.11.256)
-      aws-sdk-resources (= 2.11.256)
-    aws-sdk-core (2.11.256)
+    aws-eventstream (1.0.3)
+    aws-sdk (2.11.269)
+      aws-sdk-resources (= 2.11.269)
+    aws-sdk-core (2.11.269)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.11.256)
-      aws-sdk-core (= 2.11.256)
+    aws-sdk-resources (2.11.269)
+      aws-sdk-core (= 2.11.269)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
     axiom-types (0.1.1)
@@ -213,7 +221,7 @@ GEM
     gli (2.17.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    grape (1.1.0)
+    grape (1.2.3)
       activesupport
       builder
       mustermann-grape (~> 1.0.0)
@@ -317,12 +325,12 @@ GEM
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
-    mustermann (1.0.2)
+    mustermann (1.0.3)
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)
     naught (1.1.0)
     nenv (0.3.0)
-    newrelic_rpm (6.1.0.352)
+    newrelic_rpm (6.3.0.355)
     nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
     notiffany (0.1.1)
@@ -563,10 +571,10 @@ DEPENDENCIES
   ey_config
   factory_bot_rails
   fakeweb
-  faraday
+  fast4jp!
   firebase (~> 0.2.6)
   fog-aws (~> 1.4.0)
-  grape (= 1.1.0)
+  grape (~> 1.2.3)
   grape-rabl (~> 0.4.2)
   guard
   guard-coffeescript
@@ -586,7 +594,7 @@ DEPENDENCIES
   mail_address (~> 1.2.14)
   mixpanel-ruby
   msgpack (~> 0.5.12)
-  newrelic_rpm (~> 6.1.0.351)
+  newrelic_rpm (~> 6.3.0.355)
   oj (~> 2.18.0)
   omniauth (~> 1.6.1)
   omniauth-slack!

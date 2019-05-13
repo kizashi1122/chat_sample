@@ -179,9 +179,9 @@ highcharts-ng@~0.0.13:
   integrity sha1-jx46VCAHvRMQcepdmh6SZe64F7w=
 
 highcharts@^7.0.0:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-7.0.3.tgz#0c8edb578bae28774b9f0d49cf1ae4887b126305"
-  integrity sha512-ubfHLDqKZkGLfDGWYPaa9txLwiJDSWphMZ15xdC0RKKKxZ2ZBc13+MjDfz5ARpYGQvCHmytGOGFUgRWEvkOhNA==
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-7.1.1.tgz#8c4433e39d5e7dbdc064685d9548181a35e12c19"
+  integrity sha512-BQtWDQmH4AweQNFLGJCHBQwv9tj9kyp35bp2FFpmNBm7LOecCQdLjvZNgUKvCsKzBzJJIywcwWu4QEcAkPGCjg==
 
 hoek@2.x.x:
   version "2.16.3"
@@ -218,10 +218,10 @@ jquery-ui@^1.12.0:
   resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
   integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
 
-jquery@3.3.1, jquery@>=3.1.x, jquery@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
-  integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
+jquery@>=3.1.x, jquery@^3.4.0:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
 jsonwebtoken@^7.3.0:
   version "7.4.3"
@@ -262,9 +262,9 @@ material-design-icons-iconfont@^4.0.5:
   integrity sha512-ByJJ1yz8+RfCx2uNiC5WjVCR7K3UWRb8ytWV3RMaoFRzQLNr/J5x7+Wg1+3OlIZahNXrId9Hu+BfXfQIo01v7g==
 
 moment-timezone@^0.5.14:
-  version "0.5.23"
-  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.23.tgz#7cbb00db2c14c71b19303cb47b0fb0a6d8651463"
-  integrity sha512-WHFH85DkCfiNMDX5D3X7hpNH3/PUhjTGcD0U1SgfBGZxJ3qUmJh5FdvaFjcClxOvB3rzdfj4oRffbI38jEnC1w==
+  version "0.5.25"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.25.tgz#a11bfa2f74e088327f2cd4c08b3e7bdf55957810"
+  integrity sha512-DgEaTyN/z0HFaVcVbSyVCUU6HeFdnNC3vE4c9cgu2dgMTvjBUBdBzWfasTBmAW45u5OIMeCJtU8yNjM22DHucw==
   dependencies:
     moment ">= 2.9.0"
 
