@@ -54,8 +54,8 @@ gem 'redis-rails'
 gem 'parallel'
 
 # Uploader
-gem 'carrierwave', '~> 0.11.2'
-gem 'fog-aws', '~> 1.4.0'         # for aws S3
+gem 'carrierwave', '~> 1.3.1'
+gem 'fog-aws', '~> 3.5.0'         # for aws S3
 # gem 'ruby-filemagic'            # ファイルの内容をもとにcontent-typeの判定
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
