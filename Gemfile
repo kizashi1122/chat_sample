@@ -66,7 +66,9 @@ gem 'devise', '~> 4.6.0'
 gem 'apartment', '~> 2.2.0'
 
 # Aws Sdk
-gem 'aws-sdk', '~> 2.11.219'
+gem 'aws-sdk-s3',  '~> 1'
+gem 'aws-sdk-sqs', '~> 1'
+
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 5.0.2'
@@ -106,7 +108,7 @@ gem 'firebase', '~> 0.2.6'
 # Authorize with SNS
 gem 'omniauth', '~> 1.6.1'
 gem 'omniauth-twitter', '~> 1.4.0'
-gem 'omniauth-slack', :git => 'https://github.com/ginjo/omniauth-slack.git' # 本家に更新がないため ginjo repo を使用
+gem 'ginjo-omniauth-slack', require:'omniauth-slack'
 
 # Intercom
 gem 'intercom-rails', '~> 0.4.0'
