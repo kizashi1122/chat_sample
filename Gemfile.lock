@@ -332,7 +332,7 @@ GEM
       mustermann (~> 1.0.0)
     naught (1.1.0)
     nenv (0.3.0)
-    newrelic_rpm (6.3.0.355)
+    newrelic_rpm (6.5.0.357)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     notiffany (0.1.1)
@@ -598,7 +598,7 @@ DEPENDENCIES
   mail_address (~> 1.2.14)
   mixpanel-ruby
   msgpack (~> 0.5.12)
-  newrelic_rpm (~> 6.3.0.355)
+  newrelic_rpm (~> 6.5.0.357)
   oj (~> 2.18.0)
   omniauth (~> 1.6.1)
   omniauth-twitter (~> 1.4.0)

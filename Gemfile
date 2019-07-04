@@ -207,7 +207,7 @@ group :production, :staging do
   # Engineyard Addons
 
   # New Relic
-  gem 'newrelic_rpm', '~> 6.3.0.355'
+  gem 'newrelic_rpm', '~> 6.5.0.357'
   gem 'ey_config'
 
   gem 'unicorn', '~> 5.4.0'
