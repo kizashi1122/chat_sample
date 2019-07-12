@@ -98,7 +98,7 @@ gem 'line-bot-api'
 gem 'slack-ruby-client'
 
 # Socket.io Emitter (WebSocket)
-gem 'redis', '~> 3.3.3'
+gem 'redis', '~> 4.1.2'
 gem 'socket.io-emitter', '~> 1.0.0'
 gem 'msgpack', '~> 0.5.12'
 
@@ -121,7 +121,7 @@ gem 'aes'
 # background job
 # https://github.com/mperham/sidekiq/blob/master/4.0-Upgrade.md
 gem 'redis-namespace', '~> 1.6.0'
-gem 'sidekiq', '~> 4.2.10'
+gem 'sidekiq', '~> 5.2.7'
 gem 'sidekiq-failures'
 
 
