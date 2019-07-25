@@ -73,7 +73,7 @@ gem 'aws-sdk-sqs', '~> 1'
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 5.0.2'
 gem 'elasticsearch-model', '~> 5.0.2'
-gem 'lograge', '~> 0.10.0'
+gem 'lograge', '~> 0.11.0'
 
 # mail
 gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net::readtimeout period.
@@ -106,7 +106,7 @@ gem 'msgpack', '~> 0.5.12'
 gem 'firebase', '~> 0.2.6'
 
 # Authorize with SNS
-gem 'omniauth', '~> 1.6.1'
+gem 'omniauth', '~> 1.9.0'
 gem 'omniauth-twitter', '~> 1.4.0'
 gem 'ginjo-omniauth-slack', require:'omniauth-slack'
 
@@ -217,4 +217,4 @@ end
 # Wercker にて、setup DB で、
 # NoMethodError: undefined method `last_comment' for #<Rake::Application:0x00000003044e00> でおちた。
 # https://www.oiax.jp/books/rails_kochiku_guide/first_rspec_example_failure.html
-gem 'rake', '< 11.0'
+gem 'rake', '< 12.0'
