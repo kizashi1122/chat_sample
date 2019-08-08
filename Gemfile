@@ -33,8 +33,6 @@ gem 'grape-rabl', '~> 0.4.2'
 # Fast JSON Parser (with rabl)
 gem 'oj', '~> 2.18.0'
 
-# Active Record queries with fewer strings
-gem 'squeel', '~> 1.2.3'
 # bulk insertion of data into your database using ActiveRecord
 gem 'activerecord-import', '~> 1.0.1'
 
@@ -124,6 +122,9 @@ gem 'redis-namespace', '~> 1.6.0'
 gem 'sidekiq', '~> 5.2.7'
 gem 'sidekiq-failures'
 
+# encodes QR Codes
+# (A new pre-release has been made v1.0.0.pre. A fresh start after a long pause.)
+gem 'rqrcode', '< 1.0.0'
 
 # image processing library
 gem 'rmagick', '~> 2.16.0'
