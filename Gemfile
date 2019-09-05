@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-#ruby '2.1'
+#ruby '2.3'
 
 # use latest version for engine-yard
 gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.11'
+gem 'rails', '~> 5.0.7.2'
 # # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.21.0'
 # convert array for postgresql
@@ -58,7 +58,7 @@ gem 'fog-aws', '~> 3.5.0'         # for aws S3
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 4.6.0'
+gem 'devise', '~> 4.7.0'
 
 # managed Tenant
 gem 'apartment', '~> 2.2.0'
@@ -98,7 +98,7 @@ gem 'slack-ruby-client'
 # Socket.io Emitter (WebSocket)
 gem 'redis', '~> 4.1.2'
 gem 'socket.io-emitter', '~> 1.0.0'
-gem 'msgpack', '~> 0.5.12'
+gem 'msgpack'
 
 # Firebase (for Chat)
 gem 'firebase', '~> 0.2.6'
@@ -148,7 +148,7 @@ gem 'rubyzip', '~> 1.2.2'
 
 # Nokogiri の脆弱性対応
 gem 'rails-html-sanitizer', '~> 1.0.3'
-gem 'rails-dom-testing', '~> 1.0.9'
+gem 'rails-dom-testing', '~> 2.0.2'
 
 # PRIVATE GEM
 gem 'fast4jp', git: 'git@github.com:ingage/fast4jp.git'
@@ -161,7 +161,8 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.7.0'         # テスト後のデータベースのクリーン
   gem 'spring' # , '~> 2.0.1'                   # テスト高速化
   gem 'spring-commands-rspec'    # guard で spring を呼ぶために必要
-  gem 'teaspoon', '~> 1.0.2'                 # javascript テストランナー
+  gem 'bootsnap', require: false
+  gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
   gem 'teaspoon-jasmine', '~> 2.3.4'         # javascript テストランナー
 
   gem 'webmock'
