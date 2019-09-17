@@ -155,18 +155,27 @@ gem 'fast4jp', git: 'git@github.com:ingage/fast4jp.git'
 
 
 group :development, :test do
-  gem 'rspec-rails'              # テストライブラリ
-  gem 'factory_bot_rails'        # activerecord のモデルの生成
-  gem 'json_expressions'         # JSON チェック用のヘルパー
-  gem 'database_cleaner', '~> 1.7.0'         # テスト後のデータベースのクリーン
-  gem 'spring' # , '~> 2.0.1'                   # テスト高速化
-  gem 'spring-commands-rspec'    # guard で spring を呼ぶために必要
+  gem 'spring' # , '~> 2.0.1'                # テスト高速化
   gem 'bootsnap', require: false
+
+  gem 'rspec-rails'                          # テストライブラリ
+  gem 'factory_bot_rails'                    # activerecord のモデルの生成
+  gem 'json_expressions'                     # JSON チェック用のヘルパー
+  gem 'database_cleaner', '~> 1.7.0'         # テスト後のデータベースのクリーン
+  gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
+
   gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
-  gem 'teaspoon-jasmine', '~> 2.3.4'         # javascript テストランナー
+  gem 'teaspoon-jasmine', '~> 2.3.4'
+  gem 'spring-commands-teaspoon'
+
+  gem 'rubocop',           require: false    # コードの静的解析ツール
+  gem 'rubocop-rspec',     require: false
+  gem 'rubocop-inflector', require: false
+  gem 'spring-commands-rubocop'
 
   gem 'webmock'
   gem 'fakeweb'
+  gem 'test-queue'
 
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
@@ -178,16 +187,15 @@ end
 
 group :development do
   # guard 系
-  gem 'guard' # , '~> 2.14.1'                    # ファイル監視
+  gem 'guard' # , '~> 2.14.1'                 # ファイル監視
   gem 'guard-livereload', '~> 2.5.2'          # livereload
   gem 'guard-rspec', '~> 4.7.3'               # テストの自動化
-  gem 'guard-coffeescript'       # テスト用コードのコンパイル用
+  gem 'guard-coffeescript'                    # テスト用コードのコンパイル用
   gem 'guard-rails', '~> 0.8.0'               # guard 起動時にrails-serverを起動する
-  gem 'guard-rails-assets'       # assetsを自動コンパイル
+  gem 'guard-rails-assets'                    # assetsを自動コンパイル
   # guard で js test 時にエラーが発生するため、最新ソースを取得する
   # https://github.com/modeset/guard-teaspoon/pull/24
   gem 'guard-teaspoon', :git => 'https://github.com/modeset/guard-teaspoon.git'
-  #gem "guard-teaspoon"           # javascript テストの自動化
 
   # ruby error 時の画面でデバッグを可能にする
   gem 'better_errors'
