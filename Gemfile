@@ -138,7 +138,7 @@ gem 'rubyzip', '~> 1.2.2'
 # gem 'bcrypt', '~> 3.1.7' # devise uses bcrypt
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', '~> 5.4.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -188,14 +188,18 @@ end
 group :development do
   # guard 系
   gem 'guard' # , '~> 2.14.1'                 # ファイル監視
-  gem 'guard-livereload', '~> 2.5.2'          # livereload
+  gem 'guard-rubocop'                         # ruby静的解析
   gem 'guard-rspec', '~> 4.7.3'               # テストの自動化
   gem 'guard-coffeescript'                    # テスト用コードのコンパイル用
-  gem 'guard-rails', '~> 0.8.0'               # guard 起動時にrails-serverを起動する
-  gem 'guard-rails-assets'                    # assetsを自動コンパイル
+  # gem 'guard-livereload', '~> 2.5.2'          # livereload
+  # gem 'guard-rails', '~> 0.8.0'               # rails-serverの再起動する
+  # gem 'guard-rails-assets'                    # assetsを自動コンパイル
   # guard で js test 時にエラーが発生するため、最新ソースを取得する
   # https://github.com/modeset/guard-teaspoon/pull/24
-  gem 'guard-teaspoon', :git => 'https://github.com/modeset/guard-teaspoon.git'
+  # gem 'guard-teaspoon', :git => 'https://github.com/modeset/guard-teaspoon.git'
+
+  # 従来の rails s で unicorn を呼び出せるようにする
+  gem 'unicorn-rails'
 
   # ruby error 時の画面でデバッグを可能にする
   gem 'better_errors'
@@ -219,8 +223,6 @@ group :production, :staging do
   # New Relic
   gem 'newrelic_rpm', '~> 6.5.0.357'
   gem 'ey_config'
-
-  gem 'unicorn', '~> 5.4.0'
 end
 
 

@@ -23,14 +23,6 @@ GIT
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
 
-GIT
-  remote: https://github.com/modeset/guard-teaspoon.git
-  revision: 6ddde22370979787fca30c1a993d86ff3dd636a6
-  specs:
-    guard-teaspoon (0.8.2)
-      guard (~> 2.2)
-      teaspoon (>= 0.8.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -182,13 +174,9 @@ GEM
     elasticsearch-transport (5.0.5)
       faraday
       multi_json
-    em-websocket (0.5.1)
-      eventmachine (>= 0.12.9)
-      http_parser.rb (~> 0.6.0)
     equalizer (0.0.11)
     erubi (1.8.0)
     erubis (2.7.0)
-    eventmachine (1.2.7)
     exception_notification (4.3.0)
       actionmailer (>= 4.0, < 6)
       activesupport (>= 4.0, < 6)
@@ -265,23 +253,13 @@ GEM
       guard (>= 2.1.0)
       guard-compat (~> 1.1)
     guard-compat (1.2.1)
-    guard-livereload (2.5.2)
-      em-websocket (~> 0.5)
-      guard (~> 2.8)
-      guard-compat (~> 1.0)
-      multi_json (~> 1.8)
-    guard-rails (0.8.1)
-      guard (~> 2.11)
-      guard-compat (~> 1.0)
-    guard-rails-assets (0.1.6)
-      guard (~> 2.6)
-      guard-compat (~> 1.1)
-      rails (>= 3.1.1)
-      rake
     guard-rspec (4.7.3)
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    guard-rubocop (1.3.0)
+      guard (~> 2.0)
+      rubocop (~> 0.20)
     hashdiff (1.0.0)
     hashie (3.6.0)
     htmlcompressor (0.4.0)
@@ -573,6 +551,9 @@ GEM
     unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    unicorn-rails (2.2.1)
+      rack
+      unicorn
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -625,11 +606,8 @@ DEPENDENCIES
   grape-rabl (~> 0.4.2)
   guard
   guard-coffeescript
-  guard-livereload (~> 2.5.2)
-  guard-rails (~> 0.8.0)
-  guard-rails-assets
   guard-rspec (~> 4.7.3)
-  guard-teaspoon!
+  guard-rubocop
   htmlcompressor (~> 0.4.0)
   htmlentities
   intercom-rails (~> 0.4.0)
@@ -684,6 +662,7 @@ DEPENDENCIES
   twitter-text (~> 3.0.0)
   uglifier (>= 4.1.8)
   unicorn (~> 5.4.0)
+  unicorn-rails
   webmock
 
 BUNDLED WITH
