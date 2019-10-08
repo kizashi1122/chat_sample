@@ -11,7 +11,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "~5.1.0",
     "@uirouter/angularjs": "^0.3.2",
-    "angular": "~1.5.11",
+    "angular": "~1.6.5",
     "angular-i18n": "~1.5.0",
     "angular-resource": "~1.5.0",
     "angular-route": "~1.5.0",
