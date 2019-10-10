@@ -103,15 +103,21 @@ gem 'msgpack'
 # Firebase (for Chat)
 gem 'firebase', '~> 0.2.6'
 
+gem 'faraday' # use in ios version check
+
 # Authorize with SNS
 gem 'omniauth', '~> 1.9.0'
 gem 'omniauth-twitter', '~> 1.4.0'
 gem 'ginjo-omniauth-slack', require:'omniauth-slack'
+gem 'omniauth-google-oauth2'
 
 # Intercom
 gem 'intercom-rails', '~> 0.4.0'
 # Mixpanel
 gem 'mixpanel-ruby'
+
+# SMTP with Google XOAuth2
+gem 'gmail_xoauth'
 
 # encrypt/decrypt smtp password
 gem 'aes'
@@ -126,10 +132,13 @@ gem 'sidekiq-failures'
 # (A new pre-release has been made v1.0.0.pre. A fresh start after a long pause.)
 gem 'rqrcode', '< 1.0.0'
 
+# Apple Push Notifications
+gem 'houston'
+
 # image processing library
 gem 'rmagick', '~> 2.16.0'
 
-gem 'rubyzip', '~> 1.2.2'
+gem 'rubyzip', '~> 1.3.0'
 
 # for Bulk Insert
 # gem 'activerecord-import'
@@ -183,6 +192,7 @@ group :development, :test do
   gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
   gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
   gem 'dotenv-rails'
+  gem 'simplecov'
 end
 
 group :development do

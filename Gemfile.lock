@@ -139,6 +139,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commander (4.4.7)
+      highline (~> 2.0.0)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
     crack (0.4.3)
@@ -155,6 +157,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    docile (1.3.2)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.5)
@@ -220,6 +223,8 @@ GEM
     gli (2.18.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gmail_xoauth (0.4.2)
+      oauth (>= 0.3.6)
     googleauth (0.9.0)
       faraday (~> 0.12)
       jwt (>= 1.4, < 3.0)
@@ -262,6 +267,10 @@ GEM
       rubocop (~> 0.20)
     hashdiff (1.0.0)
     hashie (3.6.0)
+    highline (2.0.2)
+    houston (2.4.0)
+      commander (~> 4.4)
+      json
     htmlcompressor (0.4.0)
     htmlentities (4.3.4)
     http (3.3.0)
@@ -306,7 +315,7 @@ GEM
     lumberjack (1.0.13)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    mail_address (1.2.14)
+    mail_address (1.2.16)
     memoist (0.16.0)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -345,6 +354,10 @@ GEM
     omniauth (1.9.0)
       hashie (>= 3.4.6, < 3.7.0)
       rack (>= 1.6.2, < 3)
+    omniauth-google-oauth2 (0.7.0)
+      jwt (>= 2.0)
+      omniauth (>= 1.1.1)
+      omniauth-oauth2 (>= 1.5)
     omniauth-oauth (1.1.0)
       oauth
       omniauth (~> 1.0)
@@ -475,7 +488,7 @@ GEM
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
-    rubyzip (1.2.4)
+    rubyzip (1.3.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -503,6 +516,11 @@ GEM
       jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
     simple_oauth (0.3.1)
+    simplecov (0.17.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
     slack-notifier (2.3.2)
     slack-ruby-client (0.14.4)
       activesupport
@@ -598,16 +616,19 @@ DEPENDENCIES
   ey_config
   factory_bot_rails
   fakeweb
+  faraday
   fast4jp!
   firebase (~> 0.2.6)
   fog-aws (~> 3.5.0)
   ginjo-omniauth-slack
+  gmail_xoauth
   grape (~> 1.2.3)
   grape-rabl (~> 0.4.2)
   guard
   guard-coffeescript
   guard-rspec (~> 4.7.3)
   guard-rubocop
+  houston
   htmlcompressor (~> 0.4.0)
   htmlentities
   intercom-rails (~> 0.4.0)
@@ -622,6 +643,7 @@ DEPENDENCIES
   newrelic_rpm (~> 6.5.0.357)
   oj (~> 2.18.0)
   omniauth (~> 1.9.0)
+  omniauth-google-oauth2
   omniauth-twitter (~> 1.4.0)
   parallel
   pg (~> 0.21.0)
@@ -643,11 +665,12 @@ DEPENDENCIES
   rubocop
   rubocop-inflector
   rubocop-rspec
-  rubyzip (~> 1.2.2)
+  rubyzip (~> 1.3.0)
   sass-rails (~> 5.0.7)
   settingslogic
   sidekiq (~> 5.2.7)
   sidekiq-failures
+  simplecov
   slack-notifier (~> 2.3.2)
   slack-ruby-client
   socket.io-emitter (~> 1.0.0)
