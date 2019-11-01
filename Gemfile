@@ -69,8 +69,8 @@ gem 'aws-sdk-sqs', '~> 1'
 
 
 # ElasticSearch
-gem 'elasticsearch-rails', '~> 5.0.2'
-gem 'elasticsearch-model', '~> 5.0.2'
+gem 'elasticsearch-rails', '~> 7.0.0'
+gem 'elasticsearch-model', '~> 7.0.0'
 gem 'lograge', '~> 0.11.0'
 
 # mail
