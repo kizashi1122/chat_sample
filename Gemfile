@@ -78,7 +78,7 @@ gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net
 gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
-gem 'exception_notification', '~> 4.3.0'
+gem 'exception_notification', '~> 4.4.0'
 gem 'slack-notifier', '~> 2.3.2'
 
 # htmlentities
