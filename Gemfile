@@ -112,6 +112,9 @@ gem 'omniauth-twitter', '~> 1.4.0'
 gem 'ginjo-omniauth-slack', require:'omniauth-slack'
 gem 'omniauth-google-oauth2'
 
+# SAML
+gem 'ruby-saml', '~> 1.11.0'
+
 # Intercom
 gem 'intercom-rails', '~> 0.4.0'
 # Mixpanel
