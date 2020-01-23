@@ -84,6 +84,9 @@ gem 'slack-notifier', '~> 2.3.2'
 # htmlentities
 gem 'htmlentities' # using in wash html
 
+# useragent Parser
+gem 'woothee'
+
 # Twitter
 # 修正の動きがないため、ソースが動かないように fork した上で master branch を取得するようにする
 gem 'twitter', git: 'https://github.com/ishiyu/twitter.git', ref: '844818c'
@@ -164,7 +167,8 @@ gem 'rails-html-sanitizer', '~> 1.0.3'
 gem 'rails-dom-testing', '~> 2.0.2'
 
 # PRIVATE GEM
-gem 'fast4jp', git: 'git@github.com:ingage/fast4jp.git'
+gem 'fast4jp',  git: 'git@github.com:ingage/fast4jp.git'
+gem 'chatplus', git: 'git@github.com:ingage/chatplus.git'
 
 
 group :development, :test do
