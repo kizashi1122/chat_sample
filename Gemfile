@@ -9,7 +9,7 @@ gem 'bundler', '>= 1.16.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.7'
 # # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.21.0'
+gem 'pg', '~> 1.0'
 # convert array for postgresql
 # (Rails 5.0 から PG::TextEncoder::Array を使用するため不要となる)
 gem 'pg_array_parser'
@@ -66,7 +66,7 @@ gem 'apartment', '~> 2.2.0'
 # Aws Sdk
 gem 'aws-sdk-s3',  '~> 1'
 gem 'aws-sdk-sqs', '~> 1'
-
+gem 'aws-sdk-kms', '~> 1'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 7.0.0'
@@ -125,9 +125,6 @@ gem 'mixpanel-ruby'
 
 # SMTP with Google XOAuth2
 gem 'gmail_xoauth'
-
-# encrypt/decrypt smtp password
-gem 'aes'
 
 # background job
 # https://github.com/mperham/sidekiq/blob/master/4.0-Upgrade.md
