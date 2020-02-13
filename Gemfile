@@ -164,8 +164,9 @@ gem 'rails-html-sanitizer', '~> 1.0.3'
 gem 'rails-dom-testing', '~> 2.0.2'
 
 # PRIVATE GEM
-gem 'fast4jp',  git: 'git@github.com:ingage/fast4jp.git'
-gem 'chatplus', git: 'git@github.com:ingage/chatplus.git'
+gem 'fast4jp',            git: 'git@github.com:ingage/fast4jp.git'
+gem 'chatplus',           git: 'git@github.com:ingage/chatplus.git'
+gem 'rms-webservice-api', git: 'git@github.com:ingage/rms-webservice-api.git'
 
 
 group :development, :test do
@@ -175,7 +176,7 @@ group :development, :test do
   gem 'rspec-rails'                          # テストライブラリ
   gem 'factory_bot_rails'                    # activerecord のモデルの生成
   gem 'json_expressions'                     # JSON チェック用のヘルパー
-  gem 'database_cleaner', '~> 1.7.0'         # テスト後のデータベースのクリーン
+  gem 'database_cleaner', '~> 1.8.0'         # テスト後のデータベースのクリーン
   gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
 
   gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
