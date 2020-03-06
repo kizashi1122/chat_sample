@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: git@github.com:ingage/rms-webservice-api.git
-  revision: 9e3998e3883933184cd3e60b22436e120b7d36d5
+  revision: b7db3a6a29d97d9c8f97b011374d0b5e3fe6d3d2
   specs:
     rms-webservice-api (1.0.0)
       faraday (>= 0.15.0, < 1.0)
@@ -103,7 +103,7 @@ GEM
     arel (8.0.0)
     ast (2.4.0)
     aws-eventstream (1.0.3)
-    aws-partitions (1.273.0)
+    aws-partitions (1.279.0)
     aws-sdk-core (3.90.1)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -119,7 +119,7 @@ GEM
     aws-sdk-sqs (1.23.1)
       aws-sdk-core (~> 3, >= 3.71.0)
       aws-sigv4 (~> 1.1)
-    aws-sigv4 (1.1.0)
+    aws-sigv4 (1.1.1)
       aws-eventstream (~> 1.0, >= 1.0.2)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -164,7 +164,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.5)
-    database_cleaner (1.8.2)
+    database_cleaner (1.8.3)
     debug_inspector (0.0.3)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -354,7 +354,7 @@ GEM
     nenv (0.3.0)
     newrelic_rpm (6.5.0.357)
     nio4r (2.5.2)
-    nokogiri (1.10.8)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     notiffany (0.1.3)
       nenv (~> 0.1)
