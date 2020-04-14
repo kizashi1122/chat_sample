@@ -26,7 +26,7 @@
     "firebase": "^3.9.0",
     "highcharts": "^7.0.0",
     "highcharts-ng": "~0.0.13",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-ui": "^1.12.1",
     "material-design-icons-iconfont": "^5.0.1",
     "moment": "^2.24.0",
