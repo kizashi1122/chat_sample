@@ -7,7 +7,13 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.7'
+gem 'rails', '~> 5.2.4'
+
+# grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
+# rspec でエラーが出るため rack version を指定しておく
+# https://github.com/ruby-grape/grape/issues/1966
+gem 'rack', '2.0.9'
+
 # # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.0'
 # convert array for postgresql
@@ -64,9 +70,10 @@ gem 'devise', '~> 4.7.0'
 gem 'apartment', '~> 2.2.0'
 
 # Aws Sdk
-gem 'aws-sdk-s3',  '~> 1'
-gem 'aws-sdk-sqs', '~> 1'
-gem 'aws-sdk-kms', '~> 1'
+gem 'aws-sdk-athena', '~> 1'
+gem 'aws-sdk-s3',     '~> 1'
+gem 'aws-sdk-sqs',    '~> 1'
+gem 'aws-sdk-kms',    '~> 1'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 7.0.0'
@@ -176,7 +183,7 @@ group :development, :test do
   gem 'rspec-rails'                          # テストライブラリ
   gem 'factory_bot_rails'                    # activerecord のモデルの生成
   gem 'json_expressions'                     # JSON チェック用のヘルパー
-  gem 'database_cleaner', '~> 1.8.0'         # テスト後のデータベースのクリーン
+  gem 'database_cleaner-active_record'       # テスト後のデータベースのクリーン
   gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
 
   gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
