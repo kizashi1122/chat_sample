@@ -121,6 +121,7 @@ gem 'omniauth', '~> 1.9.0'
 gem 'omniauth-twitter', '~> 1.4.0'
 gem 'ginjo-omniauth-slack', require:'omniauth-slack'
 gem 'omniauth-google-oauth2'
+gem 'omniauth-chatwork', '~> 0.1.1'
 
 # SAML
 gem 'ruby-saml', '~> 1.11.0'
@@ -169,6 +170,9 @@ gem 'unicorn', '~> 5.4.0'
 # Nokogiri の脆弱性対応
 gem 'rails-html-sanitizer', '~> 1.0.3'
 gem 'rails-dom-testing', '~> 2.0.2'
+
+# Chatwork
+gem 'chatwork', '~> 0.12.2'
 
 # PRIVATE GEM
 gem 'fast4jp',            git: 'git@github.com:ingage/fast4jp.git'
