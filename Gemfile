@@ -252,8 +252,3 @@ group :production, :staging do
   gem 'ey_config'
 end
 
-
-# Wercker にて、setup DB で、
-# NoMethodError: undefined method `last_comment' for #<Rake::Application:0x00000003044e00> でおちた。
-# https://www.oiax.jp/books/rails_kochiku_guide/first_rspec_example_failure.html
-gem 'rake', '< 12.0'
