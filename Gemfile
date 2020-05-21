@@ -7,7 +7,7 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
@@ -31,28 +31,28 @@ gem 'htmlcompressor', '~> 0.4.0'
 gem 'jbuilder', '~> 2.7.0'
 
 # API Support
-gem 'grape', '~> 1.2.3'
+gem 'grape', '~> 1.2.4'
 # JSON Template (with grape)
-gem 'rabl', '~> 0.13.0'
+gem 'rabl', '~> 0.13.1'
 # For use Rabl templates in Grape
-gem 'grape-rabl', '~> 0.4.2'
+gem 'grape-rabl', '~> 0.4.3'
 # Fast JSON Parser (with rabl)
 gem 'oj', '~> 2.18.0'
 
 # bulk insertion of data into your database using ActiveRecord
-gem 'activerecord-import', '~> 1.0.1'
+gem 'activerecord-import', '~> 1.0.4'
 
 # Organise ActiveRecord model into a tree structure
-gem 'ancestry'
+gem 'ancestry', '>= 3.0.7'
 
 # rails-template をasset-pipelineで管理するためのgem
-gem 'angular-rails-templates'
+gem 'angular-rails-templates', '>= 1.0.2'
 
 # 定数の一元管理
 gem 'settingslogic'
 
 # session を redis に保存
-gem 'redis-rails'
+gem 'redis-rails', '>= 5.0.2'
 
 #
 gem 'parallel'
@@ -64,10 +64,10 @@ gem 'fog-aws', '~> 3.5.0'         # for aws S3
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.7.1'
 
 # managed Tenant
-gem 'apartment', '~> 2.2.0'
+gem 'apartment', '~> 2.2.1'
 
 # Aws Sdk
 gem 'aws-sdk-athena', '~> 1'
@@ -78,7 +78,7 @@ gem 'aws-sdk-kms',    '~> 1'
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 7.0.0'
 gem 'elasticsearch-model', '~> 7.0.0'
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.11.2'
 
 # mail
 gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net::readtimeout period.
@@ -103,7 +103,7 @@ gem 'twitter-text', '~> 3.0.0'
 gem 'line-bot-api'
 
 # Slack
-gem 'slack-ruby-client'
+gem 'slack-ruby-client', '>= 0.14.5'
 
 # Socket.io Emitter (WebSocket)
 gem 'redis', '~> 4.1.2'
@@ -127,7 +127,7 @@ gem 'omniauth-chatwork', '~> 0.1.1'
 gem 'ruby-saml', '~> 1.11.0'
 
 # Intercom
-gem 'intercom-rails', '~> 0.4.0'
+gem 'intercom-rails', '~> 0.4.1'
 # Mixpanel
 gem 'mixpanel-ruby'
 
@@ -169,7 +169,7 @@ gem 'unicorn', '~> 5.4.0'
 
 # Nokogiri の脆弱性対応
 gem 'rails-html-sanitizer', '~> 1.0.3'
-gem 'rails-dom-testing', '~> 2.0.2'
+gem 'rails-dom-testing', '~> 2.0.3'
 
 # Chatwork
 gem 'chatwork', '~> 0.12.2'
@@ -181,23 +181,23 @@ gem 'rms-webservice-api', git: 'git@github.com:ingage/rms-webservice-api.git'
 
 
 group :development, :test do
-  gem 'spring' # , '~> 2.0.1'                # テスト高速化
+  gem 'spring' , '>= 2.0.2' # , '~> 2.0.1'                # テスト高速化
   gem 'bootsnap', require: false
 
-  gem 'rspec-rails'                          # テストライブラリ
-  gem 'factory_bot_rails'                    # activerecord のモデルの生成
+  gem 'rspec-rails'                          , '>= 3.9.0' # テストライブラリ
+  gem 'factory_bot_rails'                    , '>= 5.2.0' # activerecord のモデルの生成
   gem 'json_expressions'                     # JSON チェック用のヘルパー
-  gem 'database_cleaner-active_record'       # テスト後のデータベースのクリーン
-  gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
+  gem 'database_cleaner-active_record'       , '>= 1.8.0' # テスト後のデータベースのクリーン
+  gem 'spring-commands-rspec'                , '>= 1.0.4' # spring で rspec を呼ぶために必要
 
-  gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
+  gem 'teaspoon', '~> 1.1.5' # javascript テストランナー
   gem 'teaspoon-jasmine', '~> 2.3.4'
-  gem 'spring-commands-teaspoon'
+  gem 'spring-commands-teaspoon', '>= 0.0.2'
 
   gem 'rubocop',           require: false    # コードの静的解析ツール
   gem 'rubocop-rspec',     require: false
-  gem 'rubocop-inflector', require: false
-  gem 'spring-commands-rubocop'
+  gem 'rubocop-inflector', '>= 0.1.1', require: false
+  gem 'spring-commands-rubocop', '>= 0.2.0'
 
   gem 'webmock'
   gem 'fakeweb'
@@ -208,7 +208,7 @@ group :development, :test do
 
   gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
   gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '>= 2.7.5'
   gem 'simplecov'
 end
 
@@ -241,7 +241,7 @@ group :development do
   # gem 'hirb-unicode'
   # gem 'awesome_print'  # Object表示をキレイに表示
 
-  gem 'annotate', '~> 2.7.2'     # Model に  Schema Info を自動挿入する gem
+  gem 'annotate', '~> 2.7.5' # Model に  Schema Info を自動挿入する gem
 end
 
 group :production, :staging do
