@@ -187,7 +187,6 @@ group :development, :test do
   gem 'rspec-rails'                          # テストライブラリ
   gem 'factory_bot_rails'                    # activerecord のモデルの生成
   gem 'json_expressions'                     # JSON チェック用のヘルパー
-  gem 'database_cleaner-active_record'       # テスト後のデータベースのクリーン
   gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
 
   gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
