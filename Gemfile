@@ -199,7 +199,8 @@ group :development, :test do
   gem 'spring-commands-rubocop'
 
   gem 'webmock'
-  gem 'fakeweb'
+  # https://github.com/chrisk/fakeweb/issues/62
+  gem 'fakeweb', :git => 'https://github.com/chrisk/fakeweb.git'
   gem 'test-queue'
 
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）

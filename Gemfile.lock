@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:ingage/chatplus.git
-  revision: 46901f1c9c1b9294851660042ed9adc7c810881b
+  revision: 6658514cf88d2355f110abc9933876f1b2997ca1
   specs:
     chatplus (0.1.0)
       faraday
@@ -24,6 +24,12 @@ GIT
       memoist
       nokogiri (>= 1.10.5)
       oj
+
+GIT
+  remote: https://github.com/chrisk/fakeweb.git
+  revision: 2b08c1ff2714ec13a12f3497d67fcefce95c2cbe
+  specs:
+    fakeweb (1.3.0)
 
 GIT
   remote: https://github.com/ishiyu/twitter.git
@@ -107,19 +113,19 @@ GEM
     arel (9.0.0)
     ast (2.4.0)
     aws-eventstream (1.1.0)
-    aws-partitions (1.322.0)
-    aws-sdk-athena (1.26.0)
+    aws-partitions (1.324.0)
+    aws-sdk-athena (1.27.0)
       aws-sdk-core (~> 3, >= 3.71.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-core (3.97.0)
+    aws-sdk-core (3.97.1)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.32.0)
+    aws-sdk-kms (1.33.0)
       aws-sdk-core (~> 3, >= 3.71.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.67.0)
+    aws-sdk-s3 (1.67.1)
       aws-sdk-core (~> 3, >= 3.96.1)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
@@ -218,7 +224,6 @@ GEM
     factory_bot_rails (5.2.0)
       factory_bot (~> 5.2.0)
       railties (>= 4.2.0)
-    fakeweb (1.3.0)
     faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.13.1)
@@ -653,7 +658,7 @@ DEPENDENCIES
   exception_notification (~> 4.4.0)
   ey_config
   factory_bot_rails
-  fakeweb
+  fakeweb!
   faraday
   fast4jp!
   firebase (~> 0.2.6)
