@@ -7,12 +7,12 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
 # https://github.com/ruby-grape/grape/issues/1966
-gem 'rack', '2.0.9'
+gem 'rack', '2.1.4'
 
 # # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.0'
@@ -31,11 +31,11 @@ gem 'htmlcompressor', '~> 0.4.0'
 gem 'jbuilder', '~> 2.7.0'
 
 # API Support
-gem 'grape', '~> 1.2.3'
+gem 'grape', '~> 1.2.4'
 # JSON Template (with grape)
 gem 'rabl', '~> 0.13.0'
 # For use Rabl templates in Grape
-gem 'grape-rabl', '~> 0.4.2'
+gem 'grape-rabl', '~> 0.4.3'
 # Fast JSON Parser (with rabl)
 gem 'oj', '~> 2.18.0'
 
@@ -46,13 +46,13 @@ gem 'activerecord-import', '~> 1.0.1'
 gem 'ancestry'
 
 # rails-template をasset-pipelineで管理するためのgem
-gem 'angular-rails-templates'
+gem 'angular-rails-templates', '>= 1.0.2'
 
 # 定数の一元管理
 gem 'settingslogic'
 
 # session を redis に保存
-gem 'redis-rails'
+gem 'redis-rails', '>= 5.0.2'
 
 #
 gem 'parallel'
@@ -64,10 +64,10 @@ gem 'fog-aws', '~> 3.5.0'         # for aws S3
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.7.1'
 
 # managed Tenant
-gem 'apartment', '~> 2.2.0'
+gem 'apartment', '~> 2.2.1'
 
 # Aws Sdk
 gem 'aws-sdk-athena', '~> 1'
@@ -78,7 +78,7 @@ gem 'aws-sdk-kms',    '~> 1'
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 7.0.0'
 gem 'elasticsearch-model', '~> 7.0.0'
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.11.2'
 
 # mail
 gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net::readtimeout period.
@@ -119,8 +119,8 @@ gem 'faraday' # use in ios version check
 # Authorize with SNS
 gem 'omniauth', '~> 1.9.0'
 gem 'omniauth-twitter', '~> 1.4.0'
-gem 'ginjo-omniauth-slack', require:'omniauth-slack'
-gem 'omniauth-google-oauth2'
+gem 'ginjo-omniauth-slack', '>= 2.4.1', require:'omniauth-slack'
+gem 'omniauth-google-oauth2', '>= 0.8.0'
 gem 'omniauth-chatwork', '~> 0.1.1'
 
 # SAML
@@ -138,7 +138,7 @@ gem 'gmail_xoauth'
 # https://github.com/mperham/sidekiq/blob/master/4.0-Upgrade.md
 gem 'redis-namespace', '~> 1.6.0'
 gem 'sidekiq', '~> 5.2.7'
-gem 'sidekiq-failures'
+gem 'sidekiq-failures', '>= 1.0.0'
 
 # encodes QR Codes
 # (A new pre-release has been made v1.0.0.pre. A fresh start after a long pause.)
@@ -184,12 +184,12 @@ group :development, :test do
   gem 'spring' # , '~> 2.0.1'                # テスト高速化
   gem 'bootsnap', require: false
 
-  gem 'rspec-rails'                          # テストライブラリ
-  gem 'factory_bot_rails'                    # activerecord のモデルの生成
+  gem 'rspec-rails'                          , '>= 3.9.0' # テストライブラリ
+  gem 'factory_bot_rails'                    , '>= 5.2.0' # activerecord のモデルの生成
   gem 'json_expressions'                     # JSON チェック用のヘルパー
   gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
 
-  gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
+  gem 'teaspoon', '~> 1.1.5' # javascript テストランナー
   gem 'teaspoon-jasmine', '~> 2.3.4'
   gem 'spring-commands-teaspoon'
 
@@ -206,9 +206,9 @@ group :development, :test do
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
-  gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
-  gem 'dotenv-rails'
+  gem 'capybara', '~> 2.14.4' # rails のインテグレーションテスト
+  gem 'poltergeist', '~> 1.15.0' # capybara の js driver を phantom js にする
+  gem 'dotenv-rails', '>= 2.7.5'
   gem 'simplecov'
 end
 
@@ -226,10 +226,10 @@ group :development do
   # gem 'guard-teaspoon', :git => 'https://github.com/modeset/guard-teaspoon.git'
 
   # 従来の rails s で unicorn を呼び出せるようにする
-  gem 'unicorn-rails'
+  gem 'unicorn-rails', '>= 2.2.1'
 
   # ruby error 時の画面でデバッグを可能にする
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.7.1'
   gem 'binding_of_caller'
 
   # console 表示
