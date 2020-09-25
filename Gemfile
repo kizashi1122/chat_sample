@@ -174,6 +174,9 @@ gem 'rails-dom-testing', '~> 2.0.2'
 # Chatwork
 gem 'chatwork', '~> 0.12.2'
 
+# テナント管理 <-> Hubsopt 連携
+gem 'hubspot-ruby'
+
 # PRIVATE GEM
 gem 'fast4jp',            git: 'git@github.com:ingage/fast4jp.git'
 gem 'chatplus',           git: 'git@github.com:ingage/chatplus.git'
@@ -193,9 +196,11 @@ group :development, :test do
   gem 'teaspoon-jasmine', '~> 2.3.4'
   gem 'spring-commands-teaspoon'
 
-  gem 'rubocop',           require: false    # コードの静的解析ツール
-  gem 'rubocop-rspec',     require: false
-  gem 'rubocop-inflector', require: false
+  gem 'rubocop',              require: false    # コードの静的解析ツール
+  gem 'rubocop-inflector',    require: false
+  gem 'rubocop-performance',  require: false
+  gem 'rubocop-rails',        require: false
+  gem 'rubocop-rspec',        require: false
   gem 'spring-commands-rubocop'
 
   gem 'webmock'
@@ -251,4 +256,3 @@ group :production, :staging do
   gem 'newrelic_rpm', '~> 6.5.0.357'
   gem 'ey_config'
 end
-

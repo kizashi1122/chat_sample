@@ -4,12 +4,12 @@
   "description": "",
   "dependencies": {
     "@slack/client": "^4.10.0",
-    "config": "^3.0.1",
+    "config": "^3.3.0",
     "dateformat": "^3.0.3",
-    "ioredis": "~4.6.2",
-    "socket.io": "~2.2.0",
-    "socket.io-redis": "~5.2.0",
-    "js-yaml": "~3.13.1",
+    "ioredis": "^4.16.0",
+    "js-yaml": "^3.13.1",
+    "socket.io": "^2.3.0",
+    "socket.io-redis": "^5.2.0",
     "sprintf-js": "^1.1.1"
   }
 }
