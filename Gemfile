@@ -199,7 +199,7 @@ group :development, :test do
   gem 'rubocop',              require: false    # コードの静的解析ツール
   gem 'rubocop-inflector',    require: false
   gem 'rubocop-performance',  require: false
-  gem 'rubocop-rails',        require: false
+  gem 'rubocop-rails', '>= 2.5.2', require: false
   gem 'rubocop-rspec',        require: false
   gem 'spring-commands-rubocop'
 
