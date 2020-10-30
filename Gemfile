@@ -131,9 +131,6 @@ gem 'intercom-rails', '~> 0.4.0'
 # Mixpanel
 gem 'mixpanel-ruby'
 
-# SMTP with Google XOAuth2
-gem 'gmail_xoauth'
-
 # background job
 # https://github.com/mperham/sidekiq/blob/master/4.0-Upgrade.md
 gem 'redis-namespace', '~> 1.6.0'
