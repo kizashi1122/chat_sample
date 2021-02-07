@@ -112,7 +112,7 @@ gem 'msgpack'
 gem 'redis-elasticache'     # for elasticache failover
 
 # Firebase (for Chat)
-gem 'firebase', '~> 0.2.6'
+gem 'firebase', '~> 0.2.8'
 
 gem 'faraday' # use in ios version check
 
@@ -142,7 +142,7 @@ gem 'sidekiq-failures'
 gem 'rqrcode', '< 1.0.0'
 
 # Apple Push Notifications
-gem 'houston'
+gem 'houston', '>= 2.4.0'
 
 # image processing library
 gem 'rmagick', '~> 2.16.0'
@@ -211,7 +211,7 @@ group :development, :test do
   gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
   gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
   gem 'dotenv-rails'
-  gem 'simplecov'
+  gem 'simplecov', '>= 0.17.1'
 end
 
 group :development do
