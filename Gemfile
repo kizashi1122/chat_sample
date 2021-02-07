@@ -7,7 +7,7 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
@@ -103,7 +103,7 @@ gem 'twitter-text', '~> 3.0.0'
 gem 'line-bot-api'
 
 # Slack
-gem 'slack-ruby-client'
+gem 'slack-ruby-client', '>= 0.14.5'
 
 # Socket.io Emitter (WebSocket)
 gem 'redis', '~> 4.1.2'
@@ -209,7 +209,7 @@ group :development, :test do
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
   gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
-  gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
+  gem 'poltergeist', '~> 1.15.0' # capybara の js driver を phantom js にする
   gem 'dotenv-rails'
   gem 'simplecov'
 end
