@@ -7,7 +7,7 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
@@ -58,7 +58,7 @@ gem 'redis-rails'
 gem 'parallel'
 
 # Uploader
-gem 'carrierwave', '~> 1.3.1'
+gem 'carrierwave', '~> 1.3.2'
 gem 'fog-aws', '~> 3.5.0'         # for aws S3
 # gem 'ruby-filemagic'            # ファイルの内容をもとにcontent-typeの判定
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
