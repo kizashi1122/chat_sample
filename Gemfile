@@ -193,11 +193,11 @@ group :development, :test do
   gem 'teaspoon-jasmine', '~> 2.3.4'
   gem 'spring-commands-teaspoon'
 
-  gem 'rubocop',              require: false    # コードの静的解析ツール
-  gem 'rubocop-inflector',    require: false
-  gem 'rubocop-performance',  require: false
-  gem 'rubocop-rails',        require: false
-  gem 'rubocop-rspec',        require: false
+  gem 'rubocop', '>= 0.81.0', require: false # コードの静的解析ツール
+  gem 'rubocop-inflector', '>= 0.1.1', require: false
+  gem 'rubocop-performance', '>= 1.5.2', require: false
+  gem 'rubocop-rails', '>= 2.5.2', require: false
+  gem 'rubocop-rspec', '>= 1.38.1', require: false
   gem 'spring-commands-rubocop'
 
   gem 'webmock'
@@ -217,7 +217,7 @@ end
 group :development do
   # guard 系
   gem 'guard' # , '~> 2.14.1'                 # ファイル監視
-  gem 'guard-rubocop'                         # ruby静的解析
+  gem 'guard-rubocop'                         , '>= 1.3.0' # ruby静的解析
   gem 'guard-rspec', '~> 4.7.3'               # テストの自動化
   gem 'guard-coffeescript'                    # テスト用コードのコンパイル用
   # gem 'guard-livereload', '~> 2.5.2'          # livereload
