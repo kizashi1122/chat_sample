@@ -116,10 +116,10 @@ gem 'redis-elasticache'     # for elasticache failover
 gem 'faraday' # use in ios version check
 
 # Authorize with SNS
-gem 'omniauth', '~> 1.9.0'
+gem 'omniauth', '~> 2.0.0'
 gem 'omniauth-twitter', '~> 1.4.0'
-gem 'ginjo-omniauth-slack', require:'omniauth-slack'
-gem 'omniauth-google-oauth2'
+gem 'ginjo-omniauth-slack', '>= 2.4.1', require:'omniauth-slack'
+gem 'omniauth-google-oauth2', '>= 0.8.0'
 gem 'omniauth-chatwork', '~> 0.1.1'
 gem 'omniauth-yahoojp'
 gem 'omniauth-rails_csrf_protection' # CVE-2015-9284
