@@ -121,8 +121,8 @@ gem 'omniauth-twitter', '~> 1.4.0'
 gem 'ginjo-omniauth-slack', require:'omniauth-slack'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-chatwork', '~> 0.1.1'
-gem 'omniauth-yahoojp'
-gem 'omniauth-rails_csrf_protection' # CVE-2015-9284
+gem 'omniauth-yahoojp', '>= 0.2.1'
+gem 'omniauth-rails_csrf_protection' , '>= 0.1.2' # CVE-2015-9284
 
 # SAML
 gem 'ruby-saml', '~> 1.11.0'
