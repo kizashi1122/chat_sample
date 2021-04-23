@@ -12,7 +12,8 @@ gem 'rails', '~> 5.2.4'
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
 # https://github.com/ruby-grape/grape/issues/1966
-gem 'rack', '2.0.9'
+gem 'rack', '~> 2.2.3'
+gem 'rack-health'
 
 # # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.0'
@@ -21,7 +22,7 @@ gem 'pg', '~> 1.0'
 gem 'pg_array_parser'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 4.1.8'
+gem 'terser', '~> 1.1.3'
 # Use SCSS for StyleSheets assets
 gem 'sass-rails', '~> 5.0.7'
 # compressorr for HTML (angularjs) Template
@@ -31,11 +32,11 @@ gem 'htmlcompressor', '~> 0.4.0'
 gem 'jbuilder', '~> 2.7.0'
 
 # API Support
-gem 'grape', '~> 1.2.3'
+gem 'grape', '~> 1.5.3'
 # JSON Template (with grape)
-gem 'rabl', '~> 0.13.0'
+gem 'rabl', '~> 0.14.3'
 # For use Rabl templates in Grape
-gem 'grape-rabl', '~> 0.4.2'
+gem 'grape-rabl', '~> 0.4.3'
 # Fast JSON Parser (with rabl)
 gem 'oj', '~> 2.18.0'
 
@@ -58,7 +59,7 @@ gem 'redis-rails'
 gem 'parallel'
 
 # Uploader
-gem 'carrierwave', '~> 1.3.1'
+gem 'carrierwave', '~> 2.2.1'
 gem 'fog-aws', '~> 3.5.0'         # for aws S3
 # gem 'ruby-filemagic'            # ファイルの内容をもとにcontent-typeの判定
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
@@ -71,6 +72,7 @@ gem 'apartment', '~> 2.2.0'
 
 # Aws Sdk
 gem 'aws-sdk-athena', '~> 1'
+gem 'aws-sdk-glue',   '~> 1'
 gem 'aws-sdk-s3',     '~> 1'
 gem 'aws-sdk-sqs',    '~> 1'
 gem 'aws-sdk-kms',    '~> 1'
@@ -111,9 +113,6 @@ gem 'socket.io-emitter', '~> 1.0.0'
 gem 'msgpack'
 gem 'redis-elasticache'     # for elasticache failover
 
-# Firebase (for Chat)
-gem 'firebase', '~> 0.2.6'
-
 gem 'faraday' # use in ios version check
 
 # Authorize with SNS
@@ -122,12 +121,12 @@ gem 'omniauth-twitter', '~> 1.4.0'
 gem 'ginjo-omniauth-slack', require:'omniauth-slack'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-chatwork', '~> 0.1.1'
+gem 'omniauth-yahoojp'
+gem 'omniauth-rails_csrf_protection' # CVE-2015-9284
 
 # SAML
 gem 'ruby-saml', '~> 1.11.0'
 
-# Intercom
-gem 'intercom-rails', '~> 0.4.0'
 # Mixpanel
 gem 'mixpanel-ruby'
 
@@ -145,9 +144,9 @@ gem 'rqrcode', '< 1.0.0'
 gem 'houston'
 
 # image processing library
-gem 'rmagick', '~> 2.16.0'
+gem 'rmagick', '~> 4.2.2'
 
-gem 'rubyzip', '~> 1.3.0'
+gem 'rubyzip', '~> 2.3.0'
 
 # for Bulk Insert
 # gem 'activerecord-import'
@@ -157,6 +156,7 @@ gem 'rubyzip', '~> 1.3.0'
 
 # Use unicorn as the app server
 gem 'unicorn', '~> 5.4.0'
+gem 'unicorn-worker-killer'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -178,6 +178,8 @@ gem 'hubspot-ruby'
 gem 'fast4jp',            git: 'git@github.com:ingage/fast4jp.git'
 gem 'chatplus',           git: 'git@github.com:ingage/chatplus.git'
 gem 'rms-webservice-api', git: 'git@github.com:ingage/rms-webservice-api.git'
+gem 'smslink',            git: 'git@github.com:ingage/smslink-client.git', branch: 'master'
+gem 'yahoo-shopping-api', git: 'git@github.com:ingage/yahoo-shopping-api.git', branch: 'main'
 
 
 group :development, :test do
@@ -212,6 +214,18 @@ group :development, :test do
   gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
   gem 'dotenv-rails'
   gem 'simplecov'
+
+  # console 表示
+  gem 'pry-rails'        # rails console で pry を使う
+  gem 'pry-byebug'       # debugger
+
+  # もともと firebase の依存 gem だったが、
+  # spec/lib/errors/line_network_error_spec.rb
+  # で依存しているため一時的に利用する
+  gem 'httpclient'
+
+  # 手書きで書くと長くて、複雑で、エラーが起きやすいRailsのテストをワンライナーにする
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
@@ -233,10 +247,6 @@ group :development do
   # ruby error 時の画面でデバッグを可能にする
   gem 'better_errors'
   gem 'binding_of_caller'
-
-  # console 表示
-  gem 'pry-rails'        # rails console で pry を使う
-  gem 'pry-byebug'       # debugger
 
   # rails console 内で Apartment::Database.switch が動作しなくなったため、コメントアウト
   # gem 'hirb'           # PryでのSQLの結果を綺麗に表示
