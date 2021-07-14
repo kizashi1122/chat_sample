@@ -202,7 +202,7 @@ group :development, :test do
   gem 'rubocop-rspec',        require: false
   gem 'spring-commands-rubocop'
 
-  gem 'webmock'
+  gem 'webmock', '>= 3.7.6'
   # https://github.com/chrisk/fakeweb/issues/62
   gem 'fakeweb', :git => 'https://github.com/chrisk/fakeweb.git'
   gem 'test-queue'
@@ -210,8 +210,8 @@ group :development, :test do
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
-  gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
+  gem 'capybara', '~> 2.14.4' # rails のインテグレーションテスト
+  gem 'poltergeist', '~> 1.15.0' # capybara の js driver を phantom js にする
   gem 'dotenv-rails'
   gem 'simplecov'
 
