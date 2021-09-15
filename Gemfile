@@ -245,7 +245,7 @@ group :development do
   gem 'unicorn-rails'
 
   # ruby error 時の画面でデバッグを可能にする
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'binding_of_caller'
 
   # rails console 内で Apartment::Database.switch が動作しなくなったため、コメントアウト
