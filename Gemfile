@@ -71,11 +71,11 @@ gem 'devise', '~> 4.7.0'
 gem 'apartment', '~> 2.2.0'
 
 # Aws Sdk
-gem 'aws-sdk-athena', '~> 1'
-gem 'aws-sdk-glue',   '~> 1'
-gem 'aws-sdk-s3',     '~> 1'
-gem 'aws-sdk-sqs',    '~> 1'
-gem 'aws-sdk-kms',    '~> 1'
+gem 'aws-sdk-athena', '~> 1', '>= 1.37.0'
+gem 'aws-sdk-glue', '~> 1', '>= 1.83.0'
+gem 'aws-sdk-s3', '~> 1', '>= 1.93.0'
+gem 'aws-sdk-sqs', '~> 1', '>= 1.38.0'
+gem 'aws-sdk-kms', '~> 1', '>= 1.43.0'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 7.0.0'
