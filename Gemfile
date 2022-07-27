@@ -7,7 +7,7 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 5.2.5'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
@@ -34,14 +34,14 @@ gem 'jbuilder', '~> 2.7.0'
 # API Support
 gem 'grape', '~> 1.5.3'
 # JSON Template (with grape)
-gem 'rabl', '~> 0.14.3'
+gem 'rabl', '~> 0.14.4'
 # For use Rabl templates in Grape
 gem 'grape-rabl', '~> 0.4.3'
 # Fast JSON Parser (with rabl)
 gem 'oj', '~> 2.18.0'
 
 # bulk insertion of data into your database using ActiveRecord
-gem 'activerecord-import', '~> 1.0.1'
+gem 'activerecord-import', '~> 1.0.5'
 
 # Organise ActiveRecord model into a tree structure
 gem 'ancestry'
@@ -65,10 +65,10 @@ gem 'fog-aws', '~> 3.5.0'         # for aws S3
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.7.1'
 
 # managed Tenant
-gem 'apartment', '~> 2.2.0'
+gem 'apartment', '~> 2.2.1'
 
 # Aws Sdk
 gem 'aws-sdk-athena', '~> 1'
@@ -80,7 +80,7 @@ gem 'aws-sdk-kms',    '~> 1'
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 7.0.0'
 gem 'elasticsearch-model', '~> 7.0.0'
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.11.2'
 
 # mail
 gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net::readtimeout period.
@@ -166,7 +166,7 @@ gem 'unicorn-worker-killer'
 
 # Nokogiri の脆弱性対応
 gem 'rails-html-sanitizer', '~> 1.0.3'
-gem 'rails-dom-testing', '~> 2.0.2'
+gem 'rails-dom-testing', '~> 2.0.3'
 
 # Chatwork
 gem 'chatwork', '~> 0.12.2'
@@ -191,7 +191,7 @@ group :development, :test do
   gem 'json_expressions'                     # JSON チェック用のヘルパー
   gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
 
-  gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
+  gem 'teaspoon', '~> 1.1.5' # javascript テストランナー
   gem 'teaspoon-jasmine', '~> 2.3.4'
   gem 'spring-commands-teaspoon'
 
@@ -225,7 +225,7 @@ group :development, :test do
   gem 'httpclient'
 
   # 手書きで書くと長くて、複雑で、エラーが起きやすいRailsのテストをワンライナーにする
-  gem 'shoulda-matchers', '~> 4.0'
+  gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
 end
 
 group :development do
@@ -253,7 +253,7 @@ group :development do
   # gem 'hirb-unicode'
   # gem 'awesome_print'  # Object表示をキレイに表示
 
-  gem 'annotate', '~> 2.7.2'     # Model に  Schema Info を自動挿入する gem
+  gem 'annotate', '~> 2.7.5' # Model に  Schema Info を自動挿入する gem
 end
 
 group :production, :staging do
