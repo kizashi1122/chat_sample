@@ -7,7 +7,7 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
@@ -41,7 +41,7 @@ gem 'grape-rabl', '~> 0.4.3'
 gem 'oj', '~> 2.18.0'
 
 # bulk insertion of data into your database using ActiveRecord
-gem 'activerecord-import', '~> 1.0.1'
+gem 'activerecord-import', '~> 1.0.5'
 
 # Organise ActiveRecord model into a tree structure
 gem 'ancestry'
@@ -68,7 +68,7 @@ gem 'fog-aws', '~> 3.5.0'         # for aws S3
 gem 'devise', '~> 4.7.0'
 
 # managed Tenant
-gem 'apartment', '~> 2.2.0'
+gem 'apartment', '~> 2.2.1'
 
 # Aws Sdk
 gem 'aws-sdk-athena', '~> 1'
@@ -253,7 +253,7 @@ group :development do
   # gem 'hirb-unicode'
   # gem 'awesome_print'  # Object表示をキレイに表示
 
-  gem 'annotate', '~> 2.7.2'     # Model に  Schema Info を自動挿入する gem
+  gem 'annotate', '~> 2.7.5' # Model に  Schema Info を自動挿入する gem
 end
 
 group :production, :staging do
