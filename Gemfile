@@ -7,7 +7,7 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
@@ -24,7 +24,7 @@ gem 'pg_array_parser'
 # Use Uglifier as compressor for JavaScript assets
 gem 'terser', '~> 1.1.3'
 # Use SCSS for StyleSheets assets
-gem 'sass-rails', '~> 5.0.7'
+gem 'sass-rails', '~> 6.0.0'
 # compressorr for HTML (angularjs) Template
 gem 'htmlcompressor', '~> 0.4.0'
 
