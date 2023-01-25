@@ -7,12 +7,12 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.1'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
 # https://github.com/ruby-grape/grape/issues/1966
-gem 'rack', '~> 2.2.3'
+gem 'rack', '~> 2.2.6', '>= 2.2.6.2'
 gem 'rack-health'
 
 # # Use postgresql as the database for Active Record
@@ -24,7 +24,7 @@ gem 'pg_array_parser'
 # Use Uglifier as compressor for JavaScript assets
 gem 'terser', '~> 1.1.3'
 # Use SCSS for StyleSheets assets
-gem 'sass-rails', '~> 5.0.7'
+gem 'sass-rails', '~> 5.0.8'
 # compressorr for HTML (angularjs) Template
 gem 'htmlcompressor', '~> 0.4.0'
 
@@ -34,20 +34,20 @@ gem 'jbuilder', '~> 2.7.0'
 # API Support
 gem 'grape', '~> 1.5.3'
 # JSON Template (with grape)
-gem 'rabl', '~> 0.14.3'
+gem 'rabl', '~> 0.14.4'
 # For use Rabl templates in Grape
 gem 'grape-rabl', '~> 0.4.3'
 # Fast JSON Parser (with rabl)
 gem 'oj', '~> 2.18.0'
 
 # bulk insertion of data into your database using ActiveRecord
-gem 'activerecord-import', '~> 1.0.1'
+gem 'activerecord-import', '~> 1.1.0'
 
 # Organise ActiveRecord model into a tree structure
 gem 'ancestry'
 
 # rails-template をasset-pipelineで管理するためのgem
-gem 'angular-rails-templates'
+gem 'angular-rails-templates', '>= 1.1.0'
 
 # 定数の一元管理
 gem 'settingslogic'
@@ -79,7 +79,7 @@ gem 'aws-sdk-kms',    '~> 1'
 
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 7.0.0'
-gem 'elasticsearch-model', '~> 7.0.0'
+gem 'elasticsearch-model', '~> 7.2.0'
 gem 'lograge', '~> 0.11.0'
 
 # mail
@@ -166,7 +166,7 @@ gem 'unicorn-worker-killer'
 
 # Nokogiri の脆弱性対応
 gem 'rails-html-sanitizer', '~> 1.0.3'
-gem 'rails-dom-testing', '~> 2.0.2'
+gem 'rails-dom-testing', '~> 2.0.3'
 
 # Chatwork
 gem 'chatwork', '~> 0.12.2'
@@ -191,7 +191,7 @@ group :development, :test do
   gem 'json_expressions'                     # JSON チェック用のヘルパー
   gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
 
-  gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
+  gem 'teaspoon', '~> 1.2.0' # javascript テストランナー
   gem 'teaspoon-jasmine', '~> 2.3.4'
   gem 'spring-commands-teaspoon'
 
@@ -210,7 +210,7 @@ group :development, :test do
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
+  gem 'capybara', '~> 3.36.0' # rails のインテグレーションテスト
   gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
   gem 'dotenv-rails'
   gem 'simplecov'
@@ -225,7 +225,7 @@ group :development, :test do
   gem 'httpclient'
 
   # 手書きで書くと長くて、複雑で、エラーが起きやすいRailsのテストをワンライナーにする
-  gem 'shoulda-matchers', '~> 4.0'
+  gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
 end
 
 group :development do
@@ -253,7 +253,7 @@ group :development do
   # gem 'hirb-unicode'
   # gem 'awesome_print'  # Object表示をキレイに表示
 
-  gem 'annotate', '~> 2.7.2'     # Model に  Schema Info を自動挿入する gem
+  gem 'annotate', '~> 2.7.5' # Model に  Schema Info を自動挿入する gem
 end
 
 group :production, :staging do
