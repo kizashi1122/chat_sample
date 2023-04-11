@@ -133,7 +133,7 @@ gem 'mixpanel-ruby'
 # background job
 # https://github.com/mperham/sidekiq/blob/master/4.0-Upgrade.md
 gem 'redis-namespace', '~> 1.6.0'
-gem 'sidekiq', '~> 5.2.7'
+gem 'sidekiq', '~> 7.0.8'
 gem 'sidekiq-failures'
 
 # encodes QR Codes
