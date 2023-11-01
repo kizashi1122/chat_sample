@@ -47,7 +47,7 @@ gem 'activerecord-import', '~> 1.0.1'
 gem 'ancestry'
 
 # rails-template をasset-pipelineで管理するためのgem
-gem 'angular-rails-templates'
+gem 'angular-rails-templates', '>= 1.2.1'
 
 # 定数の一元管理
 gem 'settingslogic'
@@ -144,7 +144,7 @@ gem 'rqrcode', '< 1.0.0'
 gem 'houston'
 
 # image processing library
-gem 'rmagick', '~> 4.2.2'
+gem 'rmagick', '~> 5.3.0'
 
 gem 'rubyzip', '~> 2.3.0'
 
