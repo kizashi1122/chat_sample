@@ -7,12 +7,12 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 5.2.5'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
 # https://github.com/ruby-grape/grape/issues/1966
-gem 'rack', '~> 2.2.3'
+gem 'rack', '~> 3.0.0'
 gem 'rack-health'
 
 # # Use postgresql as the database for Active Record
@@ -65,10 +65,10 @@ gem 'fog-aws', '~> 3.5.0'         # for aws S3
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.7.1'
 
 # managed Tenant
-gem 'apartment', '~> 2.2.0'
+gem 'apartment', '~> 2.2.1'
 
 # Aws Sdk
 gem 'aws-sdk-athena', '~> 1'
@@ -80,7 +80,7 @@ gem 'aws-sdk-kms',    '~> 1'
 # ElasticSearch
 gem 'elasticsearch-rails', '~> 7.0.0'
 gem 'elasticsearch-model', '~> 7.0.0'
-gem 'lograge', '~> 0.11.0'
+gem 'lograge', '~> 0.11.2'
 
 # mail
 gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net::readtimeout period.
@@ -116,7 +116,7 @@ gem 'redis-elasticache'     # for elasticache failover
 gem 'faraday' # use in ios version check
 
 # Authorize with SNS
-gem 'omniauth', '~> 1.9.0'
+gem 'omniauth', '~> 2.1.0'
 gem 'omniauth-twitter', '~> 1.4.0'
 gem 'ginjo-omniauth-slack', require:'omniauth-slack'
 gem 'omniauth-google-oauth2'
@@ -191,7 +191,7 @@ group :development, :test do
   gem 'json_expressions'                     # JSON チェック用のヘルパー
   gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
 
-  gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
+  gem 'teaspoon', '~> 1.1.5' # javascript テストランナー
   gem 'teaspoon-jasmine', '~> 2.3.4'
   gem 'spring-commands-teaspoon'
 
@@ -210,8 +210,8 @@ group :development, :test do
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
-  gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
+  gem 'capybara', '~> 2.14.4' # rails のインテグレーションテスト
+  gem 'poltergeist', '~> 1.15.0' # capybara の js driver を phantom js にする
   gem 'dotenv-rails'
   gem 'simplecov'
 
