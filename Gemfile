@@ -7,7 +7,7 @@ gem 'bundler', '>= 1.16.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 6.0.0'
 
 # grape 1.3.0 に上げない限りは rack 2.0.8 を使用しないと
 # rspec でエラーが出るため rack version を指定しておく
@@ -24,7 +24,7 @@ gem 'pg_array_parser'
 # Use Uglifier as compressor for JavaScript assets
 gem 'terser', '~> 1.1.3'
 # Use SCSS for StyleSheets assets
-gem 'sass-rails', '~> 5.0.7'
+gem 'sass-rails', '~> 5.0.8'
 # compressorr for HTML (angularjs) Template
 gem 'htmlcompressor', '~> 0.4.0'
 
@@ -47,7 +47,7 @@ gem 'activerecord-import', '~> 1.0.1'
 gem 'ancestry'
 
 # rails-template をasset-pipelineで管理するためのgem
-gem 'angular-rails-templates'
+gem 'angular-rails-templates', '>= 1.1.0'
 
 # 定数の一元管理
 gem 'settingslogic'
@@ -60,12 +60,12 @@ gem 'parallel'
 
 # Uploader
 gem 'carrierwave', '~> 2.2.1'
-gem 'fog-aws', '~> 3.5.0'         # for aws S3
+gem 'fog-aws', '~> 3.6.2' # for aws S3
 # gem 'ruby-filemagic'            # ファイルの内容をもとにcontent-typeの判定
 # gem 'carrierwave-magic'         # carrierwave との連携用gem
 
 # Authentication
-gem 'devise', '~> 4.7.0'
+gem 'devise', '~> 4.9.0'
 
 # managed Tenant
 gem 'apartment', '~> 2.2.0'
@@ -87,7 +87,7 @@ gem 'mail', '~> 2.7.0'            # 2.7.0 or above, can configure maximum of net
 gem 'mail_address', '~> 1.2.14'
 
 # Exception Notification
-gem 'exception_notification', '~> 4.4.0'
+gem 'exception_notification', '~> 4.4.1'
 gem 'slack-notifier', '~> 2.3.2'
 
 # htmlentities
@@ -116,16 +116,16 @@ gem 'redis-elasticache'     # for elasticache failover
 gem 'faraday' # use in ios version check
 
 # Authorize with SNS
-gem 'omniauth', '~> 1.9.0'
+gem 'omniauth', '~> 2.1.1'
 gem 'omniauth-twitter', '~> 1.4.0'
-gem 'ginjo-omniauth-slack', require:'omniauth-slack'
+gem 'ginjo-omniauth-slack', '>= 2.5.0', require:'omniauth-slack'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-chatwork', '~> 0.1.1'
 gem 'omniauth-yahoojp'
 gem 'omniauth-rails_csrf_protection' # CVE-2015-9284
 
 # SAML
-gem 'ruby-saml', '~> 1.11.0'
+gem 'ruby-saml', '~> 1.15.0'
 
 # Mixpanel
 gem 'mixpanel-ruby'
@@ -165,8 +165,8 @@ gem 'unicorn-worker-killer'
 # gem 'debugger', group: [:development, :test]
 
 # Nokogiri の脆弱性対応
-gem 'rails-html-sanitizer', '~> 1.0.3'
-gem 'rails-dom-testing', '~> 2.0.2'
+gem 'rails-html-sanitizer', '~> 1.1.0'
+gem 'rails-dom-testing', '~> 2.1.0'
 
 # Chatwork
 gem 'chatwork', '~> 0.12.2'
@@ -186,13 +186,13 @@ group :development, :test do
   gem 'spring' # , '~> 2.0.1'                # テスト高速化
   gem 'bootsnap', require: false
 
-  gem 'rspec-rails'                          # テストライブラリ
-  gem 'factory_bot_rails'                    # activerecord のモデルの生成
+  gem 'rspec-rails'                          , '>= 3.9.1' # テストライブラリ
+  gem 'factory_bot_rails'                    , '>= 6.0.0' # activerecord のモデルの生成
   gem 'json_expressions'                     # JSON チェック用のヘルパー
   gem 'spring-commands-rspec'                # spring で rspec を呼ぶために必要
 
-  gem 'teaspoon', '~> 1.1.5'                 # javascript テストランナー
-  gem 'teaspoon-jasmine', '~> 2.3.4'
+  gem 'teaspoon', '~> 1.2.0' # javascript テストランナー
+  gem 'teaspoon-jasmine', '~> 2.4.1'
   gem 'spring-commands-teaspoon'
 
   gem 'rubocop',              require: false    # コードの静的解析ツール
@@ -210,9 +210,9 @@ group :development, :test do
   # OSXの場合のみ、ファイル変更検知のため（それ以外の環境ではポーリングになる）
   #  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
-  gem 'capybara', '~> 2.14.4'                 # rails のインテグレーションテスト
+  gem 'capybara', '~> 3.37.0' # rails のインテグレーションテスト
   gem 'poltergeist', '~> 1.15.0'              # capybara の js driver を phantom js にする
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '>= 2.8.0'
   gem 'simplecov'
 
   # console 表示
